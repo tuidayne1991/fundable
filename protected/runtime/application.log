@@ -84,3 +84,192 @@ Stack trace:
 #16 {main}
 REQUEST_URI=/fundy/index.php/gii/model/index
 ---
+2013/12/03 08:03:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/login".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fundy/index.php/gii/login
+---
+2013/12/03 08:11:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('box/index.php')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fundy/index.php/box/index.php
+---
+2013/12/03 09:24:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fundy".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fundy')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fundy/
+---
+2013/12/03 09:57:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('loadForm')
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('box/loadForm')
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/box/loadForm
+HTTP_REFERER=http://localhost/box/index
+---
+2013/12/03 09:57:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('loadForm')
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('box/loadForm')
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/box/loadForm
+---
+2013/12/03 09:58:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('loadForm')
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('box/loadForm')
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/box/loadForm
+---
+2013/12/03 09:59:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('loadForm')
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('box/loadForm')
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/box/loadForm
+---
+2013/12/03 09:59:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('loadForm')
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('box/loadForm')
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/box/loadForm
+---
+2013/12/03 11:32:59 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.user" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/components/Controller.php(26): CComponent->__set('user', Object(User))
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(281): Controller->init()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/12/03 11:42:51 [error] [php] Undefined variable: dataProvider (/Applications/XAMPP/xamppfiles/htdocs/fundy/protected/views/box/index.php:18)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): BoxController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): BoxController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/BoxController.php(130): BoxController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): BoxController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): BoxController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): BoxController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): BoxController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): BoxController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/box
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/views/box/index.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/BoxController.php (130)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/03 12:29:51 [error] [php] include(MyHtml.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:427)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/views/box/index.php(19): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(126): require()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(95): BoxController->renderInternal()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): BoxController->renderFile()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): BoxController->renderPartial()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/BoxController.php(129): BoxController->render()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): BoxController->actionIndex()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): BoxController->runAction()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): BoxController->filterAccessControl()
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): BoxController->runActionWithFilters()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): BoxController->run()
+#16 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/box
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/views/box/index.php (19)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/BoxController.php (129)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/03 12:31:11 [error] [php] include(MyHtml.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:427)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/views/box/index.php(19): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(126): require()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(95): BoxController->renderInternal()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): BoxController->renderFile()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): BoxController->renderPartial()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/BoxController.php(129): BoxController->render()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): BoxController->actionIndex()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): BoxController->runAction()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): BoxController->filterAccessControl()
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): BoxController->runActionWithFilters()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): BoxController->run()
+#16 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/box
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/views/box/index.php (19)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/BoxController.php (129)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)

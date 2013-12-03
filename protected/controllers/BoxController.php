@@ -28,11 +28,11 @@ class BoxController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('index','create','update','loadform'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -62,21 +62,21 @@ class BoxController extends Controller
 	 */
 	public function actionCreate()
 	{
+		
 		$model=new MoneyBox;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
+		$this->performAjaxValidation($model);
 		if(isset($_POST['MoneyBox']))
 		{
 			$model->attributes=$_POST['MoneyBox'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->save()){
+				echo CJSON::encode(array(
+					'status'=>true,
+					'id'=>$model->id,
+					'item'=>MyHtml::createBoxItemHtml($model),
+				));
+			}
 		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		Yii::app()->end();
 	}
 
 	/**
@@ -94,8 +94,11 @@ class BoxController extends Controller
 		if(isset($_POST['MoneyBox']))
 		{
 			$model->attributes=$_POST['MoneyBox'];
-			if($model->save())
+			if($model->save()){
 				$this->redirect(array('view','id'=>$model->id));
+			}else{
+				MyLog::debug(print_r($model->getErrors(), true));
+			}
 		}
 
 		$this->render('update',array(
@@ -122,9 +125,10 @@ class BoxController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('MoneyBox');
+		//$dataProvider=new CActiveDataProvider('MoneyBox');
+		$owner = $this->user;
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'owner'=>$owner,
 		));
 	}
 
@@ -166,8 +170,20 @@ class BoxController extends Controller
 	{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='money-box-form')
 		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
+			$result = CActiveForm::validate($model);
+            if($model->hasErrors()){
+			    echo $result;
+			    Yii::app()->end();
+            }
 		}
+	}
+
+	public function actionLoadForm()
+	{
+		$model=new MoneyBox;
+        #load form
+        $model->owner_id = Yii::app( )->user->_id;
+        print $this->renderPartial('_form', array('model'=>$model),true,true);
+        Yii::app()->end();
 	}
 }
