@@ -1,5 +1,6 @@
 <?
     $isLogin = !Yii::app( )->user->isGuest;
+    $owner = "";
     if($isLogin)$owner = User::model( )->findByPk(Yii::app( )->user->_id);
 ?>
   
