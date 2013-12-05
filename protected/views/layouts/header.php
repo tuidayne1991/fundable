@@ -1,4 +1,4 @@
-<?
+<?php
     $isLogin = !Yii::app( )->user->isGuest;
     $owner = "";
     if($isLogin)$owner = User::model( )->findByPk(Yii::app( )->user->_id);
@@ -16,7 +16,7 @@
             <li class="active">
               
             </li>
-            <li class="active" style="width:1000px;text-align:center">
+            <li class="active" style="width:900px;text-align:center">
                 <a href="/box/index">
                     <?= $owner->total_balance ?><?= "$" ?>
                 </a>
