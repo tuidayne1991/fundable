@@ -1,6 +1,42 @@
-#header{
-    border: 1px solid black;
+.white, .white a {
+  color: #fff;
 }
-#footer{
-    border: 1px solid black;
-};
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse{
+    background-color:#faa732 !important;
+    background-image: linear-gradient(to bottom,#fbb450,#f89406);
+    color:white;
+    border: 1px solid #ddd;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    background-color:black;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color:white;
+}
+#main{
+    margin-top: 50px;
+
+}
+
+#total{
+    text-align:center;
+}
+
+.bs-footer {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-top: 100px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.reg-lb{
+    width:150px;
+}
+.login-lb{
+    width:80px;
+}
