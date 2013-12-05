@@ -13,13 +13,14 @@
  * @property MoneyBox[] $moneyBoxes
  * @property Transaction[] $transactions
  */
-class User extends CActiveRecord
+class RegInfo extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
-	const SPENDING = 0;
-	const EARNING = 1;
+	public $re_password;
+	public $re_email;
+
 	public function tableName()
 	{
 		return 'fundy_user';
@@ -33,9 +34,15 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email, password', 'required'),
+			array('email, password,re_password,re_email', 'required'),
 			array('is_activated', 'numerical', 'integerOnly'=>true),
 			array('email, password', 'length', 'max'=>255),
+			array('email' , 'checkUnique'),
+			array('email,re_email' , 'email'),
+			array('email', 'compare', 'compareAttribute'=>'re_email'),
+			array('password, re_password', 'length', 'min'=>6),
+			array('password', 'compare', 'compareAttribute'=>'re_password'),
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, email, password, is_activated', 'safe', 'on'=>'search'),
@@ -63,19 +70,24 @@ class User extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'email' => 'Email',
+			're_email' => 'Confirm Email',
 			'password' => 'Password',
+			're_password' => 'Confirm Password',
 			'is_activated' => 'Is Activated',
 		);
 	}
-	public function getTotal_balance( ){
-		$total = Yii::app()->db->createCommand()
-		->select('sum(balance) as value')
-		->from('money_box')
-		->where('owner_id = :owner_id', array(':owner_id'=>$this->id))
-    	->queryRow();
-		return $total['value'] != null ? $total['value']:0;
-	}
 
+	public function beforeSave() {
+		$this->password = md5($this->password);
+		return parent::beforeSave();
+	}
+	public function encryptPassword() {
+        # TODO: use salt?
+        # if(md5(md5($this->password).$user->salt)!==$user->password)
+        #Yii::log(__FUNCTION__."> encryptPassword password before hash = " . $this->password, 'debug');
+        $this->password = md5($this->password);
+        #Yii::log(__FUNCTION__."> encryptPassword password after  hash = " . $this->password, 'debug');
+    }
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
@@ -108,30 +120,21 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return RegInfo the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
+	
+	public function checkUnique($attribute , $params) {
+        $error_message = ($attribute == 'email') ? Yii::t('app' , 'This email is already taken') : Yii::t('app' , 'This phone number is already taken') ;
+        if(User::model()->countByAttributes(array($attribute => $this->$attribute)) > 0) {
+            $this->addError($attribute , $error_message);
+            return false;
+        }
 
-	public function getAllSpendingTransaction( ){
-		$criteria=new CDbCriteria;
-		$criteria->addCondition("owner_id =:ownerid");
-		$criteria->addCondition("type = :type");
-		$criteria->params = array(':ownerid' => $this->id,':type' =>  self::SPENDING);
-		$trans = Transaction::model( )->findAll($criteria);
-		return $trans;
-	}
-
-	public function getAllEarningTransaction( ){
-		$criteria=new CDbCriteria;
-		$criteria->addCondition("owner_id =:ownerid");
-		$criteria->addCondition("type = :type");
-		$criteria->params = array(':ownerid' => $this->id,':type' =>  self::EARNING);
-		$trans = Transaction::model( )->findAll($criteria);
-		return $trans;
-	}
-
+        return true;
+    }
 
 }

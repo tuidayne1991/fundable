@@ -6,15 +6,60 @@ $this->breadcrumbs=array(
 	'Transactions',
 );
 
-$this->menu=array(
-	array('label'=>'Create Transaction', 'url'=>array('create')),
-	array('label'=>'Manage Transaction', 'url'=>array('admin')),
-);
 ?>
-
+<div class="pull-right">
+    <button class="btn btn-warning" id="js-add-transaction">+</button>
+</div>
 <h1>Transactions</h1>
+<div id="transaction-form-container">
+</div>
+<div class="panel-group" id="transaction-container">
+    <? foreach($this->user->transactions as $tran){?>
+        <?= MyHtml::createTransactionItemHtml($tran) ?>
+    <? } ?>
+</div>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+<?php
+$add_transaction_form_script = <<<EO_SCRIPT
+$(document).on('click', '#js-add-transaction', function(event){
+    event.preventDefault();
+    var container = $('#transaction-form-container');
+    var url = '/transaction/loadForm';
+    var json = { };
+    $.post(url,json, function(data) {
+        if(data){
+            container.html(data);
+            container.show();
+        }
+    });
+});
+EO_SCRIPT;
+
+$delete_transaction_form_script = <<<EO_SCRIPT
+$(document).on('click', '#js-delete-transaction', function(event){
+    event.preventDefault();
+    var r=confirm("Are you sure to delete this transaction?");
+    if (r!=true) { return; }
+    var id = $(this).attr('data-id');
+    var url = '/transaction/delete';
+    $.post(url, {id:id},
+        function(data) {
+            if(data.status == true){
+                $("#transaction-"+id).remove();
+            }
+    }, 'json');
+});
+EO_SCRIPT;
+
+$cancel_transaction_form_script = <<<EO_SCRIPT
+$(document).on('click', '#js-cancel-transaction', function(event){
+    event.preventDefault();
+    var container = $('#transaction-form-container');
+    container.hide( );
+});
+EO_SCRIPT;
+
+Yii::app()->clientScript->registerScript('add_transaction_form', $add_transaction_form_script, CClientScript::POS_READY);
+Yii::app()->clientScript->registerScript('cancel_transaction_form', $cancel_transaction_form_script, CClientScript::POS_READY);
+Yii::app()->clientScript->registerScript('delete_transaction_form', $delete_transaction_form_script, CClientScript::POS_READY);
+?>

@@ -32,7 +32,7 @@ class MoneyBox extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('owner_id, balance, capacity, currency', 'required'),
+			array('owner_id, balance, capacity, currency, source', 'required'),
 			array('owner_id', 'numerical', 'integerOnly'=>true),
 			array('balance, capacity', 'numerical'),
 			array('currency', 'length', 'max'=>100),
@@ -66,6 +66,7 @@ class MoneyBox extends CActiveRecord
 			'balance' => 'Balance',
 			'capacity' => 'Capacity',
 			'currency' => 'Currency',
+			'source' => 'Name',
 		);
 	}
 
@@ -107,5 +108,26 @@ class MoneyBox extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	public static function getMoneyBoxListOption( ){
+		$criteria = new CDbCriteria();
+		$criteria->condition = "owner_id =:ownerid";
+		$criteria->params = array(':ownerid' => Yii::app()->user->_id);
+		$results = MoneyBox::model( )->findAll($criteria);
+
+        $boxLst = array();
+        if($results){
+            foreach($results as $r){
+                $boxLst[$r['id']]=$r['source'];
+            }
+        }
+        return $boxLst;
+
+	}
+	public static function getTypeListOption( ){
+		$types = array( );
+		$types[true] = 'Earning';
+		$types[false] = 'Spending';
+		return $types;
 	}
 }

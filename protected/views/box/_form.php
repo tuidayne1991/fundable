@@ -31,26 +31,33 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'balance'); ?>
+    <div class="input-row">
+        <?php echo $form->labelEx($model,'source',array('class' => 'login-lb')); ?>
+        <?php echo $form->textField($model,'source'); ?>
+        <?php echo $form->error($model,'source'); ?>
+    </div>
+
+	<div class="input-row">
+		<?php echo $form->labelEx($model,'balance',array('class' => 'login-lb')); ?>
 		<?php echo $form->textField($model,'balance'); ?>
 		<?php echo $form->error($model,'balance'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'capacity'); ?>
+	<div class="input-row">
+		<?php echo $form->labelEx($model,'capacity',array('class' => 'login-lb')); ?>
 		<?php echo $form->textField($model,'capacity'); ?>
 		<?php echo $form->error($model,'capacity'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'currency'); ?>
+	<div class="input-row">
+		<?php echo $form->labelEx($model,'currency',array('class' => 'login-lb')); ?>
 		<?php echo $form->textField($model,'currency',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'currency'); ?>
 	</div>
     <?php echo $form -> hiddenField($model, 'owner_id'); ?>
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'btn btn-primary')); ?>
+	<div class="input-row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'btn btn-warning')); ?>
+        <button class="btn btn-warning" id="js-cancel-box">Cancel</button>
 	</div>
 
 <?php $this->endWidget(); ?>

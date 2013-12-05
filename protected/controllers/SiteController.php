@@ -29,7 +29,12 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		if(Yii::app( )->user->isGuest){
+			$this->redirect('/site/login');
+		}else{
+			$owner = $this->user;
+			$this->render('index',array('owner' => $owner));
+		}
 	}
 
 	/**
@@ -38,7 +43,7 @@ class SiteController extends Controller
 	public function actionError()
 	{
 		if($error=Yii::app()->errorHandler->error)
-		{
+		{	
 			if(Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
 			else

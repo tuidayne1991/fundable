@@ -1,6 +1,6 @@
 <?php
 
-class TransactionController extends Controller
+class RegistrationController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -27,12 +27,16 @@ class TransactionController extends Controller
 	public function accessRules()
 	{
 		return array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view','create'),
+				'users'=>array('*'),
+			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','loadForm','index','delete'),
+				'actions'=>array('update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin'),
+				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -58,24 +62,21 @@ class TransactionController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Transaction;
-		$this->performAjaxValidation($model);
+		$model=new RegInfo;
+
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Transaction']))
+		if(isset($_POST['RegInfo']))
 		{
-			$model->attributes=$_POST['Transaction'];
-			if($model->save()){
-					$model = Transaction::model( )->findByPk($model->id);
-					echo CJSON::encode(array(
-					'status'=>true,
-					'id'=>$model->id,
-					'item'=>MyHtml::createTransactionItemHtml($model),
-				));
-			}
+			$model->attributes=$_POST['RegInfo'];
+			if($model->save())
+				$this->redirect(array('site/index'));
 		}
-		Yii::app()->end();
+
+		$this->render('create',array(
+			'model'=>$model,
+		));
 	}
 
 	/**
@@ -90,9 +91,9 @@ class TransactionController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Transaction']))
+		if(isset($_POST['RegInfo']))
 		{
-			$model->attributes=$_POST['Transaction'];
+			$model->attributes=$_POST['RegInfo'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -107,24 +108,13 @@ class TransactionController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete()
+	public function actionDelete($id)
 	{
-		/*
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-		*/
-		$result = array('status'=>false);
-        if(isset($_POST['id'])) {
-            $id = $_POST['id'];
-            if($this->loadModel($id)->delete()){
-                $result['status']=true;
-            }
-        }
-        print CJSON::encode($result);
-
 	}
 
 	/**
@@ -132,7 +122,7 @@ class TransactionController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Transaction');
+		$dataProvider=new CActiveDataProvider('RegInfo');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -143,10 +133,10 @@ class TransactionController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Transaction('search');
+		$model=new RegInfo('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Transaction']))
-			$model->attributes=$_GET['Transaction'];
+		if(isset($_GET['RegInfo']))
+			$model->attributes=$_GET['RegInfo'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -157,39 +147,27 @@ class TransactionController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Transaction the loaded model
+	 * @return RegInfo the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Transaction::model()->findByPk($id);
+		$model=RegInfo::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
 
-	public function actionLoadForm()
-	{
-		$model=new Transaction;
-        #load form
-        $model->owner_id = Yii::app( )->user->_id;
-        print $this->renderPartial('_form', array('model'=>$model),true,true);
-        Yii::app()->end();
-	}
 	/**
 	 * Performs the AJAX validation.
-	 * @param Transaction $model the model to be validated
+	 * @param RegInfo $model the model to be validated
 	 */
-
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='transaction-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='reg-info-form')
 		{
-			$result = CActiveForm::validate($model);
-            if($model->hasErrors()){
-			    echo $result;
-			    Yii::app()->end();
-            }
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
 		}
 	}
 }

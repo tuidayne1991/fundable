@@ -31,6 +31,14 @@ return array(
 
 	// application components
 	'components'=>array(
+		'clientScript'=>array(
+			'class' => 'CClientScript',
+			'scriptMap' => array(
+				'jquery.js'=>false,
+			),
+			'coreScriptPosition' => CClientScript::POS_BEGIN,
+		),
+
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,

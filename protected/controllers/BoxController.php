@@ -27,16 +27,12 @@ class BoxController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('view'),
-				'users'=>array('*'),
-			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','create','update','loadform'),
+				'actions'=>array('index','create','update','loadform','delete'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -111,13 +107,23 @@ class BoxController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
+	public function actionDelete()
 	{
+		/*
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		*/
+		$result = array('status'=>false);
+        if(isset($_POST['id'])) {
+            $id = $_POST['id'];
+            if($this->loadModel($id)->delete()){
+                $result['status']=true;
+            }
+        }
+        print CJSON::encode($result);
 	}
 
 	/**
@@ -166,17 +172,7 @@ class BoxController extends Controller
 	 * Performs the AJAX validation.
 	 * @param MoneyBox $model the model to be validated
 	 */
-	protected function performAjaxValidation($model)
-	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='money-box-form')
-		{
-			$result = CActiveForm::validate($model);
-            if($model->hasErrors()){
-			    echo $result;
-			    Yii::app()->end();
-            }
-		}
-	}
+	
 
 	public function actionLoadForm()
 	{

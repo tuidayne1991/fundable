@@ -34,7 +34,7 @@ class Transaction extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('owner_id, box_id, money, created_at', 'required'),
+			array('owner_id, box_id, money', 'required'),
 			array('owner_id, box_id, type', 'numerical', 'integerOnly'=>true),
 			array('money', 'numerical'),
 			array('description', 'safe'),
@@ -66,7 +66,7 @@ class Transaction extends CActiveRecord
 			'id' => 'ID',
 			'owner_id' => 'Owner',
 			'box_id' => 'Box',
-			'money' => 'Money',
+			'money' => 'How much',
 			'type' => 'Type',
 			'description' => 'Description',
 			'created_at' => 'Created At',
