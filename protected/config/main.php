@@ -38,7 +38,18 @@ return array(
 			),
 			'coreScriptPosition' => CClientScript::POS_BEGIN,
 		),
-
+		'mail' => array(
+                'class' => 'ext.yii-mail.YiiMail',
+                'transportType'=>'smtp',
+                'transportOptions'=>array(
+                        'host'=>'<hostanme>',
+                        'username'=>'<username>',
+                        'password'=>'<password>',
+                        'port'=>'25',                       
+                ),
+                'viewPath' => 'application.views.mail',             
+        ),
+		
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -94,16 +105,6 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'tonycaovn@gmail.com',
 	),
-	'mail' => array(
-                'class' => 'ext.yii-mail.YiiMail',
-                'transportType'=>'smtp',
-                'transportOptions'=>array(
-                        'host'=>'<hostanme>',
-                        'username'=>'<username>',
-                        'password'=>'<password>',
-                        'port'=>'25',                       
-                ),
-                'viewPath' => 'application.views.mail',             
-        ),
+
 
 );
