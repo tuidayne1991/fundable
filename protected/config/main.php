@@ -43,9 +43,9 @@ return array(
                 'class' => 'ext.yii-mail.YiiMail',
                 'transportType'=>'smtp',
                 'transportOptions'=>array(
-                        'host'=>'<hostanme>',
-                        'username'=>'<username>',
-                        'password'=>'<password>',
+                        'host'=>'smtp.gmail.com',
+                        'username'=>'tonycaovn@gmail.com',
+                        'password'=>'',
                         'port'=>'25',                       
                 ),
                 'viewPath' => 'application.views.mail',             
