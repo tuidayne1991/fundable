@@ -17,6 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'application.vendor.*',
+		'ext.yii-mail.YiiMailMessage',
 	),
 
 	'modules'=>array(
@@ -49,7 +50,7 @@ return array(
                 ),
                 'viewPath' => 'application.views.mail',             
         ),
-		
+
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
