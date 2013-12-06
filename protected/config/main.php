@@ -92,6 +92,18 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'tonycaovn@gmail.com',
 	),
+	'mail' => array(
+                'class' => 'ext.yii-mail.YiiMail',
+                'transportType'=>'smtp',
+                'transportOptions'=>array(
+                        'host'=>'<hostanme>',
+                        'username'=>'<username>',
+                        'password'=>'<password>',
+                        'port'=>'25',                       
+                ),
+                'viewPath' => 'application.views.mail',             
+        ),
+
 );

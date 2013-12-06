@@ -70,8 +70,10 @@ class RegistrationController extends Controller
 		if(isset($_POST['RegInfo']))
 		{
 			$model->attributes=$_POST['RegInfo'];
-			if($model->save())
+			if($model->save()){
+				Util::SendMail( );
 				$this->redirect(array('site/index'));
+			}
 		}
 
 		$this->render('create',array(
