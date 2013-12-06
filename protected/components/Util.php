@@ -1,14 +1,18 @@
 <?
 class Util{
-    public function sendMail($email,$subject,$content){   
+    public function sendEmail($email,$subject,$content,$params){   
         $message            = new YiiMailMessage;
-        $message->view = $content;
-        $params              = array('myMail'=>1);
-        $message->subject    = $subject;
-        $message->setBody($params, 'text/html');
-        //email                
-        $message->addTo($email);
+        // from
         $message->from = Yii::app( )->params['adminEmail'];   
+        // to               
+        $message->addTo($email);
+        // subject
+        $message->subject = $subject;
+        // content
+        $message->view = $content;
+        // params
+        $message->setBody($params, 'text/html');
+        // send
         Yii::app()->mail->send($message);
     }
 }

@@ -4238,3 +4238,18 @@ REQUEST_URI=/registration/create
 in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/models/RegInfo.php (83)
 in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/RegistrationController.php (73)
 in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/06 19:33:30 [info] [ext.yii-mail.YiiMail] Sending email to ctt.bk.hcmut2009@gmail.com
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+MIME-Version: 1.0
+Date: Fri, 06 Dec 2013 19:33:30 +0100
+Message-ID: <1386354810.52a2187a0bf8a@localhost>
+From: noreply.fundy@yahoo.com
+Subject: Registration Confirmation
+To: ctt.bk.hcmut2009@gmail.com
+
+HEllo World
+
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/extensions/yii-mail/YiiMail.php (193)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/extensions/yii-mail/YiiMail.php (131)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/components/Util.php (16)
