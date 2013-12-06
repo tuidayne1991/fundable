@@ -21,9 +21,9 @@ $this->breadcrumbs=array(
 )); ?>
 
 	<div class="input-row">
-		<?php echo $form->labelEx($model,'username',array('class' => 'login-lb')); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<?php echo $form->labelEx($model,'userid',array('class' => 'login-lb')); ?>
+		<?php echo $form->textField($model,'userid'); ?>
+		<?php echo $form->error($model,'userid'); ?>
 	</div>
 
 	<div class="input-row">

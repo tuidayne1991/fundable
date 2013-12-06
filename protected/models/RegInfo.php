@@ -79,6 +79,8 @@ class RegInfo extends CActiveRecord
 
 	public function beforeSave() {
 		$this->password = md5($this->password);
+		$this->activation_code = $this->generatePassword(9);
+		$this->unique_id  = uniqid();
 		return parent::beforeSave();
 	}
 	public function encryptPassword() {
@@ -135,6 +137,21 @@ class RegInfo extends CActiveRecord
         }
 
         return true;
+    }
+
+	public function generatePassword($length=8) {
+        $chars = "abcdefghijkmnopqrstuvwxyz023456789";
+        srand((double)microtime()*1000000);
+        $i = 0;
+        $pass = '' ;
+
+        while ($i <= $length) {
+            $num = rand() % 33;
+            $tmp = substr($chars, $num, 1);
+            $pass .= $tmp;
+            $i++;
+        }
+        return $pass;
     }
 
 }

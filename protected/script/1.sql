@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 06, 2013 at 05:39 AM
+-- Generation Time: Dec 06, 2013 at 11:20 AM
 -- Server version: 5.6.12
 -- PHP Version: 5.5.3
 
@@ -33,21 +33,18 @@ CREATE TABLE IF NOT EXISTS `fundy_user` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `is_activated` tinyint(1) NOT NULL DEFAULT '0',
+  `unique_id` text COLLATE utf8_unicode_ci NOT NULL,
+  `activation_code` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `fundy_user`
 --
 
-INSERT INTO `fundy_user` (`id`, `email`, `password`, `is_activated`) VALUES
-(1, 'tuidayne1991@gmail.com', 'e99a18c428cb38d5f260853678922e03', 1),
-(2, 'ctt.bk.hcmut2009@gmail.com', 'abc123', 0),
-(3, 'tonycaovn@gmail.com', 'abc123', 0),
-(4, 'helloworld@gmail.com', 'abc123', 0),
-(5, 'abc@gmail.com', 'abc123', 0),
-(6, 'abc3@gmail.com', 'abc123', 0);
+INSERT INTO `fundy_user` (`id`, `email`, `password`, `is_activated`, `unique_id`, `activation_code`) VALUES
+(8, 'ctt.bk.hcmut2009@gmail.com', 'e99a18c428cb38d5f260853678922e03', 0, '52a1a2989c2fc', 'ycgwh8ggvj');
 
 -- --------------------------------------------------------
 
