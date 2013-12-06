@@ -28,7 +28,7 @@ class RegistrationController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create'),
+				'actions'=>array('create'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -62,23 +62,27 @@ class RegistrationController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new RegInfo;
+		if(Yii::app( )->user->isGuest){
+			$model=new RegInfo;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+			// Uncomment the following line if AJAX validation is needed
+			// $this->performAjaxValidation($model);
 
-		if(isset($_POST['RegInfo']))
-		{
-			$model->attributes=$_POST['RegInfo'];
-			if($model->save()){
-				Sender::sendConfirmEmail($model);
-				$this->redirect(array('site/index'));
+			if(isset($_POST['RegInfo']))
+			{
+				$model->attributes=$_POST['RegInfo'];
+				if($model->save()){
+					Sender::sendConfirmEmail($model);
+					$this->redirect(array('site/index'));
+				}
 			}
-		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+			$this->render('create',array(
+				'model'=>$model,
+			));
+		}else{
+			$this->redirect('/site/index');
+		}
 	}
 
 	/**
