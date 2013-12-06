@@ -182,4 +182,15 @@ class BoxController extends Controller
         print $this->renderPartial('_form', array('model'=>$model),true,true);
         Yii::app()->end();
 	}
+
+	protected function performAjaxValidation($model){
+		if(isset($_POST['ajax']) && $_POST['ajax']==='box-form')
+		{
+			$result = CActiveForm::validate($model);
+            if($model->hasErrors()){
+			    echo $result;
+			    Yii::app()->end();
+            }
+		}
+	}
 }
