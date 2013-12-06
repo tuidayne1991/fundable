@@ -43,12 +43,13 @@ return array(
                 'class' => 'ext.yii-mail.YiiMail',
                 'transportType'=>'smtp',
                 'transportOptions'=>array(
-                        'host'=>'smtp.gmail.com',
-                        'username'=>'tonycaovn@gmail.com',
-                        'password'=>'',
-                        'port'=>'25',                       
+                        'host'=>'smtp.mail.yahoo.com',
+                        'username'=>'noreply.fundy@yahoo.com',
+                        'password'=>'Abcd1234',
+                        'port'=>'465',
+                        'encryption' => 'ssl',                 
                 ),
-                'viewPath' => 'application.views.mail',             
+                'viewPath' => 'application.views.mails',             
         ),
 
 		'user'=>array(
@@ -104,7 +105,7 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'tonycaovn@gmail.com',
+		'adminEmail'=>'noreply.fundy@yahoo.com',
 	),
 
 

@@ -71,7 +71,7 @@ class RegistrationController extends Controller
 		{
 			$model->attributes=$_POST['RegInfo'];
 			if($model->save()){
-				Util::SendMail( );
+				Sender::sendConfirmEmail($model);
 				$this->redirect(array('site/index'));
 			}
 		}
