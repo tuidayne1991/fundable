@@ -6,13 +6,13 @@
 }
 .navbar-inverse{
     background-color:#faa732 !important;
-    background-image: linear-gradient(to bottom,#fbb450,#f89406);
+    background-image: linear-gradient(to bottom,#f0ad4e,#f0ad4e);
     color:white;
     border: 1px solid #ddd;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
     background-color:#faa732 !important;
-    background-image: linear-gradient(to bottom,#fbb450,#f89406);
+    background-image: linear-gradient(to bottom,#f0ad4e,#f0ad4e);
 }
 .navbar-inverse .navbar-nav>li>a {
     color:white;

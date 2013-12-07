@@ -7,7 +7,6 @@
  * @property integer $id
  * @property integer $owner_id
  * @property double $balance
- * @property double $capacity
  * @property string $currency
  *
  * The followings are the available model relations:

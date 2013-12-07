@@ -5145,3 +5145,1687 @@ Stack trace:
 REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
 HTTP_REFERER=http://localhost/
 ---
+2013/12/07 10:40:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/box/index
+---
+2013/12/07 10:40:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/box/index
+---
+2013/12/07 10:40:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/box/index
+---
+2013/12/07 11:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/
+---
+2013/12/07 11:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/
+---
+2013/12/07 11:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/
+---
+2013/12/07 11:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 11:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 11:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 11:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 11:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 11:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 11:42:48 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 11:45:43 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 11:46:23 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 11:48:23 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 11:48:24 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 11:48:24 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 11:48:24 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 12:11:45 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 12:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%96V%06%d8%80%e9%1b%83Pw%075%86%91%87%01%9d%7f~%1d&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=4177051648&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 12:21:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418625024&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:14:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:14:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%96V%06%d8%80%e9%1b%83Pw%075%86%91%87%01%9d%7f~%1d&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=5537792&downloaded=8388608&left=4169203712&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:14:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:15:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:16:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:20:03 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 13:34:35 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 13:34:37 [error] [exception.CException] exception 'CException' with message 'Alias "mrtime.MrtimeModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php:322
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/YiiBase.php(196): YiiBase::import('mrtime.MrtimeMo...', true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CModule.php(282): YiiBase::createComponent('mrtime.MrtimeMo...', 'mrtime', NULL, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(337): CModule->getModule('mrtime')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(276): CWebApplication->createController('mrtime')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 13:39:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 13:39:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 13:39:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 13:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 13:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 13:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 13:44:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mrtime.css".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('css/mrtime.css')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/mrtime.css
+HTTP_REFERER=http://localhost/
+---
+2013/12/07 13:44:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:44:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:44:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%96V%06%d8%80%e9%1b%83Pw%075%86%91%87%01%9d%7f~%1d&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=5537792&downloaded=15728640&left=4160946176&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:45:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mrtime.css".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('css/mrtime.css')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/mrtime.css
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 13:45:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:45:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:45:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:45:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:46:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:46:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:46:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:46:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:46:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 13:47:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:02:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fundy.action' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `action`.
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:14:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%96V%06%d8%80%e9%1b%83Pw%075%86%91%87%01%9d%7f~%1d&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=5537792&downloaded=23068672&left=4154163200&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:14:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:15:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:15:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:16:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:16:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:16:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:21:24 [error] [php] Undefined variable: add_action_form_script (/Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php:62)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php(8): DefaultController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(286): DefaultController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/mrtime
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php (62)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:21:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loadform".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(270): CController->missingAction('loadform')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('loadform')
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/l...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mrtime/action/loadForm
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:23:16 [error] [exception.CException] exception 'CException' with message 'Property "MoneyBox.name" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('name')
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(MoneyBox), 'name')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(MoneyBox), 'name', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(MoneyBox), 'name', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/action/_form.php(24): CActiveForm->textField(Object(MoneyBox), 'name', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php(182): CController->renderPartial('_form', Array, true, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): ActionController->actionLoadForm()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#18 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('loadform')
+#20 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/l...')
+#21 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/mrtime/action/loadForm
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:23:17 [error] [exception.CException] exception 'CException' with message 'Property "MoneyBox.name" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('name')
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(MoneyBox), 'name')
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(MoneyBox), 'name', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(MoneyBox), 'name', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/action/_form.php(24): CActiveForm->textField(Object(MoneyBox), 'name', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php(182): CController->renderPartial('_form', Array, true, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): ActionController->actionLoadForm()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#18 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('loadform')
+#20 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/l...')
+#21 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/mrtime/action/loadForm
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:26:40 [error] [php] Undefined variable: add_box_form_script (/Applications/XAMPP/xamppfiles/htdocs/fundy/protected/views/box/index.php:64)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): BoxController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): BoxController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/BoxController.php(138): BoxController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): BoxController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): BoxController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): BoxController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): BoxController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): BoxController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/box/index
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/views/box/index.php (64)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/controllers/BoxController.php (138)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 14:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 14:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/site/index
+---
+2013/12/07 14:45:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%96V%06%d8%80%e9%1b%83Pw%075%86%91%87%01%9d%7f~%1d&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=5537792&downloaded=25165824&left=4152885248&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:45:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:45:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:45:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:45:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:46:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:48:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 14:50:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php (73)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:50:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php(73): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): ActionController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/c...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/mrtime/action/create
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:50:45 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php (73)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:50:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php(73): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): ActionController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/c...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/mrtime/action/create
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:51:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php (73)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:51:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php(73): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): ActionController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/c...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/mrtime/action/create
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:52:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php (73)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:52:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php(73): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): ActionController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/c...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/mrtime/action/create
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:52:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php (73)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:52:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php(73): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): ActionController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/c...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/mrtime/action/create
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:55:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php (73)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 14:55:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`fundy`.`action`, CONSTRAINT `action_user_constraint` FOREIGN KEY (`owner_id`) REFERENCES `fundy_user` (`id`)). The SQL statement executed was: INSERT INTO `action` (`end_time`, `status`, `name`, `description`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php(73): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): ActionController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/c...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/mrtime/action/create
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 14:59:38 [error] [php] Trying to get property of non-object (/Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php:17)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php(8): DefaultController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(286): DefaultController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/mrtime
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php (17)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 15:00:47 [error] [php] Trying to get property of non-object (/Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php:17)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php(20): DefaultController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(286): DefaultController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/mrtime
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php (17)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 15:00:52 [error] [php] Trying to get property of non-object (/Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php:17)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php(20): DefaultController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(286): DefaultController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/mrtime
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php (17)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 15:01:25 [error] [php] Trying to get property of non-object (/Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php:17)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php(20): DefaultController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(286): DefaultController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/mrtime
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php (17)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 15:01:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/site/login
+---
+2013/12/07 15:01:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/site/login
+---
+2013/12/07 15:01:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/site/login
+---
+2013/12/07 15:04:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:04:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:04:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:07:57 [error] [php] Undefined variable: id (/Applications/XAMPP/xamppfiles/htdocs/fundy/protected/vendor/MyHtml.php:54)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): ActionController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): ActionController->filterAccessControl()
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): ActionController->runActionWithFilters()
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): ActionController->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CWebApplication->run()
+REQUEST_URI=/mrtime/action/create
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/vendor/MyHtml.php (54)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/ActionController.php (77)
+in /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php (13)
+2013/12/07 15:09:38 [error] [exception.CException] exception 'CException' with message 'Property "Action.currency" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(145): CComponent->__get('currency')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/vendor/MyHtml.php(67): CActiveRecord->__get('currency')
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php(18): MyHtml::createActionItemHtml(Object(Action))
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(126): require('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', NULL, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php(34): CController->render('index')
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#16 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('')
+#18 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#19 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 15:13:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('delete')
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/d...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/mrtime/action/delete
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:13:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1116): CFilterChain->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime/action/d...')
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/mrtime/action/delete
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:15:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%96V%06%d8%80%e9%1b%83Pw%075%86%91%87%01%9d%7f~%1d&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=5537792&downloaded=25165824&left=4152623104&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:15:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:15:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:15:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:15:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:17:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:18:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce.php".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('announce.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/announce.php?info_hash=%d7h%08%03%e4%af%a1%d8U48AJ%fe%0a%f1E%94%14%e0&peer_id=-UM1020-%8f%5b%c0%1b%fe%83s%94%04%0cL%e4&port=58066&uploaded=0&downloaded=0&left=1418461184&corrupt=0&key=C721FF2A&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3abae8%3a56ff%3afe0f%3ac894
+---
+2013/12/07 15:20:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:20:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:20:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:22:03 [error] [exception.CException] exception 'CException' with message 'Property "Action.start_time" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/db/ar/CActiveRecord.php(145): CComponent->__get('start_time')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/vendor/MyHtml.php(60): CActiveRecord->__get('start_time')
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/views/default/index.php(18): MyHtml::createActionItemHtml(Object(Action))
+#3 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(126): require('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', NULL, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/fundy/protected/modules/mrtime/controllers/DefaultController.php(34): CController->render('index')
+#8 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#9 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(291): CFilterChain->run()
+#16 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(282): CController->run('')
+#18 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('mrtime')
+#19 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/mrtime
+---
+2013/12/07 15:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/mrtime
+---
+2013/12/07 15:32:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.woff
+HTTP_REFERER=http://localhost/
+---
+2013/12/07 15:32:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.ttf
+HTTP_REFERER=http://localhost/
+---
+2013/12/07 15:32:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.svg".' in /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/web/CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/fundy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/fundy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/glyphicons-halflings-regular.svg
+HTTP_REFERER=http://localhost/
+---

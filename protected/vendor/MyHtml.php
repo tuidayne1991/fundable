@@ -48,5 +48,32 @@ HTML;
         return $html;
     }
 
+public static function createActionItemHtml($model) {
+  $html = <<<HTML
+       <div class="panel panel-default" id="action-{$model->id}">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#action-container" href="#collapse{$model->id}">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#action-container" href="#collapse{$model->id}">
+              {$model->name}
+            </a>
+            <div class="pull-right">
+              {$model->begin_time}
+            </div>
+          </h4>
+        </div>
+        <div id="collapse{$model->id}" class="panel-collapse collapse">
+          <div class="panel-body">
+              <div class="pull-right">
+                <a id="js-delete-action" data-id="{$model->id}"><i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </div>
+            Time: 0</br>
+            <button class="btn btn-success">Stop</button>
+          </div>
+        </div>
+      </div>
+HTML;
+        return $html;
+    }
 }
 ?>

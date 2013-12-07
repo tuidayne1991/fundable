@@ -28,6 +28,7 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+		'mrtime'=>array(),
 	),
 
 	// application components
@@ -66,6 +67,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 			'showScriptName'=>false,
+			'caseSensitive' => false,
 		),
 		/*
 		'db'=>array(
