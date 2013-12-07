@@ -11,7 +11,8 @@
     border: 1px solid #ddd;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-    background-color:black;
+    background-color:#faa732 !important;
+    background-image: linear-gradient(to bottom,#fbb450,#f89406);
 }
 .navbar-inverse .navbar-nav>li>a {
     color:white;
