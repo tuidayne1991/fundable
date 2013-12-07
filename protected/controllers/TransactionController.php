@@ -173,7 +173,7 @@ class TransactionController extends Controller
 		$model=new Transaction;
         #load form
         $model->owner_id = Yii::app( )->user->_id;
-        print $this->renderPartial('_form', array('model'=>$model),true,true);
+        print $this->renderPartial('_form', array('model'=>$model,'owner' => $this->user),true,true);
         Yii::app()->end();
 	}
 	/**

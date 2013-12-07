@@ -19,7 +19,11 @@ $this->breadcrumbs=array(
     <? } ?>
 </div>
 
-<?php
+<script>
+$('#change-color-switch').bootstrapSwitch('setOnClass', 'success');
+$('#change-color-switch').bootstrapSwitch('setOffClass', 'danger');
+</script>
+<?
 $add_transaction_form_script = <<<EO_SCRIPT
 $(document).on('click', '#js-add-transaction', function(event){
     event.preventDefault();

@@ -40,19 +40,14 @@
 	<div class="input-row">
 		<?php echo $form->labelEx($model,'balance',array('class' => 'login-lb')); ?>
 		<?php echo $form->textField($model,'balance'); ?>
+        <?php echo $model->isNewRecord? 
+                $form->dropDownList(
+                    $model,'currency',Util::getAllCurrencies( ),
+                    array('options' => array($owner->currency =>array('selected'=>true)))
+                ):
+                $form->dropDownList($model,'currency',Util::getAllCurrencies( )); ?>
 		<?php echo $form->error($model,'balance'); ?>
-	</div>
-
-	<div class="input-row">
-		<?php echo $form->labelEx($model,'capacity',array('class' => 'login-lb')); ?>
-		<?php echo $form->textField($model,'capacity'); ?>
-		<?php echo $form->error($model,'capacity'); ?>
-	</div>
-
-	<div class="input-row">
-		<?php echo $form->labelEx($model,'currency',array('class' => 'login-lb')); ?>
-		<?php echo $form->textField($model,'currency',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'currency'); ?>
+        <?php echo $form->error($model,'currency'); ?>
 	</div>
     <?php echo $form -> hiddenField($model, 'owner_id'); ?>
 	<div class="input-row buttons">

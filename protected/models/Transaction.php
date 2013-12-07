@@ -65,7 +65,7 @@ class Transaction extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'owner_id' => 'Owner',
-			'box_id' => 'Box',
+			'box_id' => 'Wallet',
 			'money' => 'How much',
 			'type' => 'Type',
 			'description' => 'Description',

@@ -16,9 +16,9 @@
             <li class="active">
               
             </li>
-            <li class="active" style="width:900px;text-align:center">
+            <li class="active" style="width: 1020px;text-align:center">
                 <a href="/box/index">
-                    <?= $owner->total_balance ?><?= "$" ?>
+                    <?= $owner->total_balance ?> <?= $owner->currency ?>
                 </a>
             </li>
         <? } ?>

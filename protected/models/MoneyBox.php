@@ -32,13 +32,13 @@ class MoneyBox extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('owner_id, balance, capacity, currency, source', 'required'),
+			array('owner_id, balance, currency, source', 'required'),
 			array('owner_id', 'numerical', 'integerOnly'=>true),
-			array('balance, capacity', 'numerical'),
+			array('balance', 'numerical'),
 			array('currency', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, owner_id, balance, capacity, currency', 'safe', 'on'=>'search'),
+			array('id, owner_id, balance, currency', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,7 +64,6 @@ class MoneyBox extends CActiveRecord
 			'id' => 'ID',
 			'owner_id' => 'Owner',
 			'balance' => 'Balance',
-			'capacity' => 'Capacity',
 			'currency' => 'Currency',
 			'source' => 'Name',
 		);
@@ -91,7 +90,6 @@ class MoneyBox extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('owner_id',$this->owner_id);
 		$criteria->compare('balance',$this->balance);
-		$criteria->compare('capacity',$this->capacity);
 		$criteria->compare('currency',$this->currency,true);
 
 		return new CActiveDataProvider($this, array(

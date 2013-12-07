@@ -3,7 +3,13 @@
 /* @var $model Transaction */
 /* @var $form CActiveForm */
 ?>
-
+<head>
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script> 
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-switch.css" />
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-switch.js"></script>  
+</head>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -37,17 +43,27 @@
 		<?php echo $form->error($model,'box_id'); ?>
 	</div>
 	
+    <div class="input-row">
+        <?php echo $form->labelEx($model,'type',array('class'=> 'reg-lb')); ?>
+            <div id="label-switch" class="make-switch" data-on-label="SI" data-off-label="NO">
+                <?php echo $form->checkBox($model,'type',array('checked'=>'checked')); ?>
+            </div>
+        <?php echo $form->error($model,'type'); ?>
+    </div>
+    <br/>
 	<div class="input-row">
 		<?php echo $form->labelEx($model,'money',array('class'=> 'reg-lb')); ?>
 		<?php echo $form->textField($model,'money'); ?>
+          <?php echo $model->isNewRecord? 
+                $form->dropDownList(
+                    $model,'currency',Util::getAllCurrencies( ),
+                    array('options' => array($owner->currency =>array('selected'=>true)))
+                ):
+                $form->dropDownList($model,'currency',Util::getAllCurrencies( )); ?>
 		<?php echo $form->error($model,'money'); ?>
+        <?php echo $form->error($model,'currency'); ?>
 	</div>
 
-	<div class="input-row">
-		<?php echo $form->labelEx($model,'type',array('class'=> 'reg-lb')); ?>
-		<?php echo $form->dropDownList($model,'type',MoneyBox::getTypeListOption()); ?>
-		<?php echo $form->error($model,'type'); ?>
-	</div>
 
 	<div class="input-row">
 		<?php echo $form->labelEx($model,'description',array('class'=> 'reg-lb')); ?>
@@ -63,4 +79,15 @@
 
 <?php $this->endWidget(); ?>
 
+
 </div><!-- form -->
+
+<?
+$bootstrap_switch_script = <<<EO_SCRIPT
+    $('#label-switch').bootstrapSwitch('setOnClass', 'warning');
+    $('#label-switch').bootstrapSwitch('setOnLabel', '+');
+    $('#label-switch').bootstrapSwitch('setOffLabel', '-');
+EO_SCRIPT;
+
+Yii::app()->clientScript->registerScript('bootstrap_switch', $bootstrap_switch_script, CClientScript::POS_READY);
+?>
