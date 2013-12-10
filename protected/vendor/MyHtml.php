@@ -49,29 +49,40 @@ HTML;
     }
 
 public static function createActionItemHtml($model) {
+  $status = $model->status?"checked":"";
   $html = <<<HTML
-       <div class="panel panel-default" id="action-{$model->id}">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#action-container" href="#collapse{$model->id}">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#action-container" href="#collapse{$model->id}">
-              {$model->name}
-            </a>
-            <div class="pull-right">
-              {$model->begin_time}
-            </div>
-          </h4>
+
+       
+          
+        
+      
+ <div id="action-{$model->id}" class="time-control" data-id="{$model->id}">
+  <ul class="list-group">
+    <li class="list-group-item">
+        <div id= "switch-{$model->id}" class="make-switch js-switch-time-btn" data-on-label="YES" data-off-label="NO" data-id="{$model->id}">
+            <input type="checkbox" {$status}>
         </div>
-        <div id="collapse{$model->id}" class="panel-collapse collapse">
-          <div class="panel-body">
-              <div class="pull-right">
-                <a id="js-delete-action" data-id="{$model->id}"><i class="glyphicon glyphicon-trash"></i>
-                </a>
-            </div>
-            Time: 0</br>
-            <button class="btn btn-success">Stop</button>
-          </div>
+        {$model->name}
+        <div class="pull-right">
+           <span id="stopwatch-{$model->id}">00:00:00</span>
         </div>
-      </div>
+    </li>
+    <!-- <li class="list-group-item"><a id="js-delete-action" data-id="{$model->id}" style="color:black"><i class="glyphicon glyphicon-trash"></i></a></li> -->
+    <li class="list-group-item">{$model->description}</li>
+  </ul> 
+  </div>
+      <script>
+          $(function(){
+            var status = "{$status}";
+            clocklst["mrtime{$model->id}"] = new MrTime("stopwatch-{$model->id}",{$model->duration});
+            if(status != "checked"){
+              clocklst["mrtime{$model->id}"].Timer.pause();
+            }
+            $('#switch-{$model->id}').bootstrapSwitch('setOnClass', 'success');
+            $('#switch-{$model->id}').bootstrapSwitch('setOnLabel', '<i class="glyphicon glyphicon-time" style="line-height: normal;height: 20px;"></i>');
+            $('#switch-{$model->id}').bootstrapSwitch('setOffLabel', 'Stop');
+          });
+      </script>
 HTML;
         return $html;
     }

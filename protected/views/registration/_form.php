@@ -44,7 +44,7 @@
 	</div>
 
 	<div class="input-row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn btn-warning')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn btn-danger')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

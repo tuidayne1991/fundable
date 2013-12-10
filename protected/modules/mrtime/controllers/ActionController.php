@@ -32,7 +32,7 @@ class ActionController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','loadform','delete'),
+				'actions'=>array('create','update','loadform','delete','switch'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -85,6 +85,30 @@ class ActionController extends Controller
 			'model'=>$model,
 		));
 	}
+
+
+
+	public function actionSwitch()
+	{
+		$result = array('status'=>false);
+        if(isset($_POST['id']) && isset($_POST['status'])) {
+            $id = $_POST['id'];
+            $model = $this->loadModel($id);
+            if($model != null){
+            	if($_POST['status'] == "true"){
+            		$model->status = true;
+            	}else{
+            		$model->status = false;
+            		$model->duration = 	isset($_POST['duration'])?$_POST['duration']:0;
+            	}
+            	if($model->save( )){
+            		$result['status']=true;
+            	}
+            }
+        }
+        print CJSON::encode($result);
+	}
+
 
 	/**
 	 * Updates a particular model.

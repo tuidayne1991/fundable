@@ -22,6 +22,7 @@
             if(data.status == true){
                 $('#action-container').prepend(data.item);
                 $('#action-form-container').hide();
+
             }
         }"
     ),
@@ -43,9 +44,11 @@
 		<?php echo $form->error($model,'description'); ?>
 	</div>
 	<?php echo $form -> hiddenField($model, 'owner_id'); ?>
+    </br>
 	<div class="input-row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'btn btn-success')); ?>
-	</div>
+	   <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'btn btn-success')); ?>
+	   <button id="js-cancel-action" class="btn btn-success">Cancel</button>
+    </div>
 
 <?php $this->endWidget(); ?>
 

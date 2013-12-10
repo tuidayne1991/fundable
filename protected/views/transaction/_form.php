@@ -3,13 +3,6 @@
 /* @var $model Transaction */
 /* @var $form CActiveForm */
 ?>
-<head>
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script> 
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-switch.css" />
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-switch.js"></script>  
-</head>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -26,6 +19,7 @@
         'validateOnType'=>false,
         'afterValidate'=>"js:function(form, data, hasError){
             if(data.status == true){
+
                 $('#transaction-container').append(data.item);
                 $('#transaction-form-container').hide();
             }
@@ -91,3 +85,4 @@ EO_SCRIPT;
 
 Yii::app()->clientScript->registerScript('bootstrap_switch', $bootstrap_switch_script, CClientScript::POS_READY);
 ?>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-switch.js"></script>

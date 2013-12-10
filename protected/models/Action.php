@@ -30,8 +30,7 @@ class Action extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('owner_id,name, description, status', 'required'),
-			array('status', 'numerical', 'integerOnly'=>true),
+			array('owner_id,name, description, status', 'required','on'=>'insert'),
 			array('name', 'length', 'max'=>100),
 			array('end_time, created_at', 'safe'),
 			// The following rule is used by search().

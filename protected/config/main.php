@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.msfundy.controllers.*',
 		'application.vendor.*',
 		'ext.yii-mail.YiiMailMessage',
 	),
@@ -28,7 +29,8 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		'mrtime'=>array(),
+		'mrtime' => array(),
+		'msfundy' => array(), 
 	),
 
 	// application components
