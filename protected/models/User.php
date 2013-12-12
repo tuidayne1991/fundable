@@ -53,6 +53,8 @@ class User extends CActiveRecord
 			'moneyBoxes' => array(self::HAS_MANY, 'MoneyBox', 'owner_id'),
 			'transactions' => array(self::HAS_MANY, 'Transaction', 'owner_id'),
 			'actions' => array(self::HAS_MANY, 'Action', 'owner_id'),
+			'member' => array(self::HAS_MANY, 'GroupUser', 'user_id'),
+			'groups' => array(self::HAS_MANY, 'Group', 'group_id', 'through'=>'member')
 		);
 	}
 
