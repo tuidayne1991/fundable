@@ -71,6 +71,14 @@ return array(
 			'showScriptName'=>false,
 			'caseSensitive' => false,
 		),
+		'authManager' => array(
+			'class' => 'CDbAuthManager',
+            'connectionID'=>'db',
+            'itemTable'=>'AuthItem',
+			'itemChildTable'=>'AuthItemChild',
+			'assignmentTable'=>'AuthAssignment',
+			'defaultRoles'=>array('authenticated', 'guest'),
+		),
 		/*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
