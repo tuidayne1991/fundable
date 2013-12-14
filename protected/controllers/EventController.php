@@ -70,6 +70,7 @@ class EventController extends Controller
 		if(isset($_POST['Event']))
 		{
 			$model->attributes=$_POST['Event'];
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -77,6 +78,8 @@ class EventController extends Controller
 			$model->owner_id = $_GET['group'];
 			$model->type = 'group_event';
 		}
+		$model->start_time = date('Y-m-d H:i');
+		$model->end_time = date('Y-m-d H:i');
 		$this->render('create',array(
 			'model'=>$model,
 		));

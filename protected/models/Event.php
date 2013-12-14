@@ -17,7 +17,7 @@ class Event extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Event';
+		return 'event';
 	}
 
 	/**
@@ -28,13 +28,14 @@ class Event extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('owner_id, name, type, description', 'required'),
+			array('owner_id, name, type, description,start_time,end_time,location', 'required'),
 			array('owner_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>200),
 			array('type', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, owner_id, name, type, description', 'safe', 'on'=>'search'),
+			array('id, owner_id, name, type, description,start_time,end_time,location', 'safe', 'on'=>'search'),
+
 		);
 	}
 
@@ -46,6 +47,7 @@ class Event extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'owner' => array(self::BELONGS_TO, 'Group', 'owner_id'),
 		);
 	}
 
@@ -61,7 +63,8 @@ class Event extends CActiveRecord
 			'type' => 'Type',
 			'description' => 'Description',
 			'location' => 'where',
-			'date' => 'when',
+			'start_time' => 'when',
+			'end_time' => 'to',
 		);
 	}
 
@@ -88,7 +91,9 @@ class Event extends CActiveRecord
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('type',$this->type,true);
 		$criteria->compare('description',$this->description,true);
-
+		$criteria->compare('location',$this->location,true);
+		$criteria->compare('start_time',$this->start_time,true);
+		$criteria->compare('end_time',$this->end_time,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

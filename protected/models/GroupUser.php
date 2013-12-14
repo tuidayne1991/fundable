@@ -17,6 +17,7 @@ class GroupUser extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	public $email;
 	public function tableName()
 	{
 		return 'group_user';
@@ -30,7 +31,10 @@ class GroupUser extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('group_id, user_id, type', 'required'),
+			array('email','email'),
+			array('email','checkExist'),
+			array('email','checkUnique'),
+			array('group_id,type', 'required'),
 			array('group_id, user_id', 'numerical', 'integerOnly'=>true),
 			array('type', 'length', 'max'=>100),
 			// The following rule is used by search().
@@ -38,7 +42,77 @@ class GroupUser extends CActiveRecord
 			array('group_id, user_id, type', 'safe', 'on'=>'search'),
 		);
 	}
+	
+	public function checkExist($attribute , $params) {
+        $error_message = Yii::t('app' , 'This user doesn\'t exist');
+        $user = User::model()->findByAttributes(array($attribute => $this->$attribute));
+		if($user == null) {
+            $this->addError($attribute , $error_message);
+            return false;
+        }
+        return true;
+    }
 
+    public function checkUnique($attribute , $params) {
+        $error_message1 = Yii::t('app' , 'This user\'s already in this group');
+        $error_message2 = Yii::t('app' , 'This user was added but didn\'t confirm yet');
+        	$groupuser = GroupUser::model()->findByAttributes(
+        		array(
+        			'group_id' => $this->group_id,
+        			'user_id' => $this->user_id
+        		)
+        	);
+
+        	if($groupuser != null){
+        		if($groupuser->status == 'confirmed'){
+        			$this->addError($attribute , $error_message1);
+        		}else{
+        			$this->addError($attribute , $error_message2);
+        		}
+        		return false;
+        	}
+    		return true;
+    }
+/*
+	public function addMember( ){
+		if(isset($_POST['email']) && isset($_POST['group'])){
+			$user = User::model( )->findByAttributes(array('email' => $_POST['email']));
+			$group_id = $_POST['group'];
+			if($user == null) {
+				echo CJSON::encode(array(
+					'status'=>false,
+					'message'=>'user doesn\'t exist'
+				));
+			}else{
+				$groupuser = GroupUser::model()->findByAttributes(
+					array('user_id' => $user->id,
+						  'group_id' => $group_id));
+				if($groupuser != null){
+					echo CJSON::encode(array(
+					'status'=>false,
+					'message'=>'this user already is group\'s member'
+					));
+				}
+				else{
+					$groupuser = new GroupUser( );
+					$groupuser->user_id = $user->id;
+					$groupuser->group_id = $group_id;
+					if($groupuser->save( )){
+						echo CJSON::encode(array(
+							'status'=>true
+						));
+					}
+				}
+			}
+		}
+		else{
+				echo CJSON::encode(array(
+					'status'=>false,
+					'message'=>'Transmission error'
+				));
+		}
+	}
+	*/
 	/**
 	 * @return array relational rules.
 	 */

@@ -28,12 +28,16 @@ class GroupController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','addmember'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
 				'users'=>array('@'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('internal'),
+				'expression' => array('GroupController','allowOnlyMember')
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -56,6 +60,22 @@ class GroupController extends Controller
 		));
 	}
 
+	public function actionInternal($id){
+		$this->render('internal',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	public function allowOnlyMember(){
+		if(Yii::app()->user->isGuest){
+			return false;
+		}
+		$model = Group::model()->findByPk($_GET["id"]); 
+        if($model != null && in_array(Yii::app()->user->_id,$model->getMemberIds())){
+            return true;
+        }
+        return false;
+    }
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -79,6 +99,26 @@ class GroupController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionAddMember(){
+		$model=new GroupUser;
+		$user = User::model()->findByAttributes(array('email' => $_POST['GroupUser']['email']));
+		$model->user_id  = ($user != null)?$user->id:'-1';
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model,'group-user-form');
+		if(isset($_POST['GroupUser']))
+		{
+			$model->attributes=$_POST['GroupUser'];
+			if($model->save()){
+				echo CJSON::encode(array(
+					'status'=>true
+				));
+			}
+		}
+		Yii::app()->end();
 	}
 
 	/**
@@ -164,12 +204,15 @@ class GroupController extends Controller
 	 * Performs the AJAX validation.
 	 * @param Group $model the model to be validated
 	 */
-	protected function performAjaxValidation($model)
+	protected function performAjaxValidation($model,$form = 'group-form')
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='group-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']=== $form)
 		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
+			$result = CActiveForm::validate($model);
+            if($model->hasErrors()){
+			    echo $result;
+			    Yii::app()->end();
+            }
 		}
 	}
 }

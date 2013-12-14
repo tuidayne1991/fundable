@@ -14,17 +14,21 @@ EOD;
     public function run($args) {
         Yii::log('Running command authsetup', 'debug');
         Yii::log('Clearing out old auth data', 'debug');
-
+        if(($this->_authManager=Yii::app()->authManager)===null){    
+            echo "Error: an authorization manager, named 'authManager' must be configured to use this command.\n";
+            echo "If you already added 'authManager' component in application configuration,\n";
+            echo "please quit and re-enter the yiic shell.\n";
+return; }
 
         $connection = Yii::app()->db;
         $query = <<<EO_SQL
-DELETE FROM "AuthItem";
+DELETE FROM AuthItem;
 EO_SQL;
         $command = $connection->createCommand($query);
         $command->execute();
 
         $query = <<<EO_SQL
-DELETE FROM "AuthItemChild";
+DELETE FROM AuthItemChild;
 EO_SQL;
         $command = $connection->createCommand($query);
         $command->execute();
@@ -34,17 +38,17 @@ EO_SQL;
 
         
 
-        $bizRule='return !Yii::app()->user->isGuest;';
+        $bizRule='return !Yii::app()->user->isGuest && in_array(Yii::app()->user->_id, $params["group"]->getMemberIds());';
         $op = $auth->createOperation('viewGroupInternal', 'view Group Internal',$bizRule);
         
-        $task=$auth->createTask('a','aaa');
+        $task=$auth->createTask('aaa','group aaa');
         $task->addChild('viewGroupInternal');
         
         $role=$auth->createRole('authenticated');
-        $role->addChild('a');
+        $role->addChild('aaa');
+
+        $role=$auth->createRole('member');
         #assign admin role by email
-        $role=$auth->createRole('admin');
-        $auth->assign('admin', 'admin@cogini.com');
     }
 }
 ?>

@@ -6,7 +6,7 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('confirm'),
+				'actions'=>array('confirm','confirmMember'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -65,6 +65,40 @@ class UserController extends Controller
 
         } else
             $this->redirect('/');
+	}
 
+    public function actionConfirmMember(){
+        if(isset($_GET['key']) && isset($_GET['ac'] && isset($_GET['group'])) {
+            $user = User::model()->findByAttributes(array(
+                'unique_id' => $_GET['key'] ,
+                'activation_code' => $_GET['ac'] ,
+            ));
+            $group_id = $_GET['group'];
+            if(!$user || !$user->is_activated ) $this->redirect('/');
+
+            $user->is_activated = true;
+            $groupuser = GroupUser::model( )->findByAttributes(array('user_id' => $user->id, 'group_id' => $group_id));
+            if($groupuser != null){
+                $groupuser->status = "confirmed";
+                $group = Group::model( )->findByPk($group_id);
+                if($groupuser->save( )) $this->render('confirmMember', array('user'=>$user,'group' => $group));
+            }
+            if ($user->save(false)) $this->render('confirm', array('user'=>$user));
+
+        } else $this->redirect('/');
+    }
+
+
+	public function actionConfirmMember() {
+        if(isset($_GET['key']) && isset($_GET['ac'])) {
+            $user = User::model()->findByAttributes(array(
+                'unique_id' => $_GET['key'] ,
+                'activation_code' => $_GET['ac'] ,
+            ));
+            if(!$user || $user->is_activated ) $this->redirect('/');
+
+            if ($user->save(false)) $this->render('confirm', array('user'=>$user));
+        }
+        else $this->redirect('/');
 	}
 }

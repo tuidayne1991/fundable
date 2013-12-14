@@ -67,8 +67,8 @@ class TransactionController extends Controller
 		{
 			$model->attributes=$_POST['Transaction'];
 			if($model->save()){
-					$model = Transaction::model( )->findByPk($model->id);
-					echo CJSON::encode(array(
+				$model = Transaction::model( )->findByPk($model->id);
+				echo CJSON::encode(array(
 					'status'=>true,
 					'id'=>$model->id,
 					'item'=>MyHtml::createTransactionItemHtml($model),

@@ -46,7 +46,8 @@ class Group extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'groupUsers' => array(self::HAS_MANY, 'GroupUser', 'group_id'),
-			'members' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)'),
+			'members' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "confirmed"'),
+			'pendingMembers' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "pending"'),
 		);
 	}
 
@@ -89,7 +90,7 @@ class Group extends CActiveRecord
 		));
 	}
 	
-	public function addMember($user_id){
+	public function addMember($user_id,$role = "member"){
 		$model = GroupUser::model()->findByAttributes(
 			array('user_id'=>$user_id,'group_id'=>$this->id)
 		);
@@ -97,10 +98,20 @@ class Group extends CActiveRecord
             $model = new GroupUser;
             $model->user_id = $user_id;
             $model->group_id = $this->id;
-            $model->type = "owner";
+            $model->type = $role;
+            $model->status = 'confirmed';
             if ($model->save())return true;
         }
         return false;
+	}
+
+	public function getMemberIds(){
+		$members = $this->members;
+        $memberIds = array();
+        foreach($members as $member){
+            array_push($memberIds, $member->id);
+        }
+        return $memberIds;
 	}
 	/**
 	 * Returns the static model of the specified AR class.
