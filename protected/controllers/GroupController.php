@@ -102,6 +102,7 @@ class GroupController extends Controller
 
 	public function actionAddMember(){
 		$model=new GroupUser;
+		$model->setScenario('addMember');
 		$user = User::model()->findByAttributes(array('email' => $_POST['GroupUser']['email']));
 		$model->user_id  = ($user != null)?$user->id:'-1';
 

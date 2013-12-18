@@ -32,8 +32,8 @@ class GroupUser extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('email','email'),
-			array('email','checkExist'),
-			array('email','checkUnique'),
+			array('email','checkExist','on' =>'addMember'),
+			array('email','checkUnique','on' =>'addMember'),
 			array('group_id,type', 'required'),
 			array('group_id, user_id', 'numerical', 'integerOnly'=>true),
 			array('type', 'length', 'max'=>100),

@@ -50,7 +50,7 @@ class Group extends CActiveRecord
 			'pendingMembers' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "pending"'),
 		);
 	}
-
+	
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */

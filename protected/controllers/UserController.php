@@ -94,16 +94,17 @@ class UserController extends Controller
                 'activation_code' => $_GET['ac'] ,
             ));
             $group_id = $_GET['group'];
-            if(!$user || !$user->is_activated ) $this->redirect('/');
-
-            $user->is_activated = true;
+            if(!$user || !$user->is_activated){
+                $this->redirect('/');
+            }
             $groupuser = GroupUser::model( )->findByAttributes(array('user_id' => $user->id, 'group_id' => $group_id));
             if($groupuser != null){
                 $groupuser->status = "confirmed";
                 $group = Group::model( )->findByPk($group_id);
                 if($groupuser->save( )) $this->render('confirmMember', array('user'=>$user,'group' => $group));
             }
-        } else $this->redirect('/');
+        }
+        else $this->redirect('/');
     }
 
     public function actionUpdateProfile($id){
