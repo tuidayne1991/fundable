@@ -20,23 +20,17 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'group_id'); ?>
-		<?php echo $form->textField($model,'group_id'); ?>
-		<?php echo $form->error($model,'group_id'); ?>
+		<?php echo $form->labelEx($model,'name',array('class' => 'group-lb')); ?>
+		<?php echo $form->textField($model,'name'); ?>
+		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'group_name'); ?>
-		<?php echo $form->textField($model,'group_name'); ?>
-		<?php echo $form->error($model,'group_name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textField($model,'description'); ?>
+		<?php echo $form->labelEx($model,'description',array('class' => 'group-lb')); ?>
+		<?php echo $form->textArea($model,'description'); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
-
+	<?php echo $form->hiddenField($model,'group_id'); ?>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn btn-danger')); ?>
 	</div>

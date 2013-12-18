@@ -48,9 +48,10 @@ class Group extends CActiveRecord
 			'groupUsers' => array(self::HAS_MANY, 'GroupUser', 'group_id'),
 			'members' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "confirmed"'),
 			'pendingMembers' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "pending"'),
+			'projects' => array(self::HAS_MANY, 'Project', 'group_id'),
 		);
 	}
-	
+
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */

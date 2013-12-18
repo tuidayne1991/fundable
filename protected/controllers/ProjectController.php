@@ -70,13 +70,18 @@ class ProjectController extends Controller
 		if(isset($_POST['Project']))
 		{
 			$model->attributes=$_POST['Project'];
-			if($model->save())
+			$model->funding_status = "private";
+			if($model->save()){
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		if(isset($_POST['group'])){
+			$model->group_id = $_POST['group'];
+			$this->render('create',array(
+				'model'=>$model,
+			));
+		}
 	}
 
 	/**

@@ -14,7 +14,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('group_name')); ?>:</b>
-	<?php echo CHtml::encode($data->group_name); ?>
+	<?php echo CHtml::encode($data->project_name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('description')); ?>:</b>

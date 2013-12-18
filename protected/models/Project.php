@@ -31,12 +31,11 @@ class Project extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, group_id, group_name, description, funding_status', 'required'),
-			array('id, group_id, group_name, description', 'numerical', 'integerOnly'=>true),
+			array('group_id, name, description, funding_status', 'required'),
 			array('funding_status', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, group_id, group_name, description, funding_status', 'safe', 'on'=>'search'),
+			array('id, group_id, name, description, funding_status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -86,7 +85,7 @@ class Project extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('group_id',$this->group_id);
-		$criteria->compare('group_name',$this->group_name);
+		$criteria->compare('name',$this->name);
 		$criteria->compare('description',$this->description);
 		$criteria->compare('funding_status',$this->funding_status,true);
 

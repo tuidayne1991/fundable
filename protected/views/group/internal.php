@@ -10,10 +10,26 @@ $this->breadcrumbs=array(
 <h1><?= $model->name ?> Internal</h1>
 
 <div>
-    <a href="/event/create/group/<?= $model->id?>" class="btn btn-danger">Create Event</a>
+    <form action="/event/create" method="POST">
+        <input type="hidden" name="group" value="<?= $model->id ?>" />
+        <button type="submit" class="btn btn-danger">Create Event</button>
+    </form>
+    <form action="/project/create" method="POST">
+        <input type="hidden" name="group" value="<?= $model->id ?>" />
+        <button type="submit" class="btn btn-danger">Create Project</button>
+    </form>
     <a href="/group/view/id/<?= $model->id?>" class="btn btn-danger">View Page</a>
 </div>
 <div>
+    <h2>Project</h2>
+     <ul>
+    <? foreach($model->projects as $project){ ?>
+        <li>
+            <a href="/project/view/id/<?= $project->id?>"><?= $project->name ?></a>
+        </li>
+    <? } ?>
+    </ul>
+
     <h2>Members</h2>
      <ul>
     <? foreach($model->members as $member){ ?>
