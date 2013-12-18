@@ -90,17 +90,19 @@ class Group extends CActiveRecord
 		));
 	}
 	
-	public function addMember($user_id,$role = "member"){
-		$model = GroupUser::model()->findByAttributes(
-			array('user_id'=>$user_id,'group_id'=>$this->id)
-		);
+	public function addMember($owner,$role = "member"){
+		$model = GroupUser::model()->findByAttributes(array('user_id'=>$owner->id,'group_id'=>$this->id));
         if(!$model){
             $model = new GroupUser;
-            $model->user_id = $user_id;
+            $model->email = $owner->email;
+            $model->user_id = $owner->id;
             $model->group_id = $this->id;
             $model->type = $role;
             $model->status = 'confirmed';
-            if ($model->save())return true;
+            if ($model->save()){
+            	return true;
+
+            }    
         }
         return false;
 	}

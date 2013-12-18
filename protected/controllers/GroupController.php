@@ -91,7 +91,7 @@ class GroupController extends Controller
 		{
 			$model->attributes=$_POST['Group'];
 			if($model->save()){
-				$result = $model->addMember($this->user->id);
+				$result = $model->addMember($this->user);
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
