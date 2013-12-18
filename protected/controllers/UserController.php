@@ -10,7 +10,7 @@ class UserController extends Controller
                 'users'=>array('*'),
             ),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('updateProfile','edit'),
+				'actions'=>array('updateProfile','edit','changePassword','loadpasswordform'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -126,11 +126,38 @@ class UserController extends Controller
         Yii::app()->end();
     }
 
+    public function actionChangePassword($id){
+            $model=$this->loadModel($id);
+            $model->setScenario('changePassword');
+            $this->performAjaxValidation($model);
+            if(isset($_POST['User']))
+            {
+                $model->old_password = $_POST['User']['old_password'];
+                $model->new_password = $_POST['User']['new_password'];
+                $model->re_new_password = $_POST['User']['re_new_password'];
+                if($model->save()){
+                   print CJSON::encode(array(
+                        'status'=>true
+                    ));
+                }
+            }
+            Yii::app()->end();
+    }
+
     public function actionEdit($id)
     {
         $model= $this->loadModel($id);
         print $this->renderPartial('_form', array('model'=>$model),true,true);
         Yii::app()->end();
+    }
+    public function actionLoadPasswordForm()
+    {
+        if(isset($_POST['id'])){
+            $id = $_POST['id'];
+            $model= $this->loadModel($id);
+            print $this->renderPartial('_change_password', array('model'=>$model),true,true);
+            Yii::app()->end();
+        }
     }
 
     protected function performAjaxValidation($model)

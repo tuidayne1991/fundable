@@ -11,8 +11,13 @@ $this->breadcrumbs=array(
 </div>
 <div id="profile-form-container">
 </div>
+<div id="change-password-form-container">
+</div>
 <? if($isOwner){ ?>
-<button id="js-update-profile" class="btn" >Update your profile</button>
+<div id="update-btn-panel">
+    <button id="js-update-profile" class="btn" >Update your profile</button>
+    <button id="js-change-password-btn" class="btn" >Change Password</button>
+</div>
 <? } ?>
 
 <?
@@ -27,7 +32,7 @@ $(document).on('click', '#js-update-profile', function(event){
         if(data){
             container.html(data);
             container.show();
-            $("#js-update-profile").hide( );
+            $("#update-btn-panel").hide( );
         }
     });
 });
@@ -38,11 +43,39 @@ $(document).on('click', '#js-cancel-profile', function(event){
     event.preventDefault();
     var container = $('#profile-form-container');
     container.empty();
-    $("#js-update-profile").show( );
+    $("#update-btn-panel").show( );
+});
+EO_SCRIPT;
+
+$change_password_script = <<<EO_SCRIPT
+$(document).on('click', '#js-change-password-btn', function(event){
+    event.preventDefault();
+    var container = $('#change-password-form-container');
+    var url = '/user/loadpasswordform';
+    var id = {$model->id};
+    var json = {id:id};
+    $.post(url,json, function(data) {
+        if(data){
+            container.html(data);
+            container.show();
+            $("#update-btn-panel    ").hide( );
+        }
+    });
+});
+EO_SCRIPT;
+
+$cancel_change_password_script = <<<EO_SCRIPT
+$(document).on('click', '#js-cancel-change-password', function(event){
+    event.preventDefault();
+    var container = $('#change-password-form-container');
+    container.empty();
+    $("#update-btn-panel").show( );
 });
 EO_SCRIPT;
 
 Yii::app()->clientScript->registerScript('update_profile_form', $edit_profile_script, CClientScript::POS_READY);
 Yii::app()->clientScript->registerScript('cancel_profile_form', $cancel_profile_script, CClientScript::POS_READY);
+Yii::app()->clientScript->registerScript('change_password', $change_password_script, CClientScript::POS_READY);
+Yii::app()->clientScript->registerScript('cancel_change_password', $cancel_change_password_script, CClientScript::POS_READY);
 }
 ?>

@@ -83,9 +83,11 @@ HTML;
     }
 
     public static function createUserProfileHtml($model){
+      $isOwner = !Yii::app()->user->isGuest && Yii::app()->user->_id == $model->id;
+      $currency = $isOwner?"Currency: {$model->currency}</br>":"";
 $html = <<<HTML
       Name: {$model->name}</br>
-      Currency: {$model->currency}</br>
+      {$currency}
 HTML;
         return $html;
     }

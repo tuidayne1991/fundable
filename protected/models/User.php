@@ -20,6 +20,9 @@ class User extends CActiveRecord
 	 */
 	const SPENDING = 0;
 	const EARNING = 1;
+	public $old_password;
+	public $new_password;
+	public $re_new_password;
 	public function tableName()
 	{
 		return 'fundy_user';
@@ -36,6 +39,9 @@ class User extends CActiveRecord
 			array('email, password', 'required','on' => 'insert'),
 			array('is_activated', 'numerical', 'integerOnly'=>true),
 			array('email, password', 'length', 'max'=>255),
+			array('old_password','checkOldPassword','on' => 'changePassword'),
+			array('old_password,new_password,re_new_password','required','on' =>'changePassword'),
+			array('new_password', 'compare', 'compareAttribute'=>'re_new_password','on'=>'changePassword'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, email, password, is_activated', 'safe', 'on'=>'search'),
@@ -66,8 +72,9 @@ class User extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'email' => 'Email',
-			'password' => 'Password',
+			'old_password' => 'Old Password',
 			'is_activated' => 'Is Activated',
+			're_new_password' => 'Retype New Password'
 		);
 	}
 	public function getTotal_balance( ){
@@ -77,6 +84,25 @@ class User extends CActiveRecord
 		->where('owner_id = :owner_id', array(':owner_id'=>$this->id))
     	->queryRow();
 		return $total['value'] != null ? $total['value']:0;
+	}
+	
+	public function encryptPassword() {
+        $this->password = md5($this->password);
+    }
+
+	public function checkOldPassword($attribute, $params) {
+        $error_message = "Old Password's incorrect";
+        if(md5($this->$attribute) == $this->password)return true;
+        $this->addError($attribute , $error_message);
+        return false;
+    }
+
+    public function beforeSave() {
+    	if($this->new_password != null){
+			$this->password = $this->new_password;
+			$this->encryptPassword( );
+		}
+		return parent::beforeSave();
 	}
 
 	/**
