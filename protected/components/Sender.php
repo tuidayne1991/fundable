@@ -10,7 +10,7 @@ class Sender{
 
     public static function sendGroupMemberInvitationEmail($inviter,$group,$recipient){
         $prefix = "[".Yii::app()->name."]";
-        $subject = '{$prefix} {$inviter->name} ($inviter->email) invites you to join the group "{$group->name}"';
+        $subject = "{$prefix} {$inviter->name} ({$inviter->email}) invites you to join the group '{$group->name}'";
         $content = 'group_member_invitation_email';
         $params  = array('inviter' => $inviter, 'group' => $group,'recipient'=>$recipient);
         Util::sendEmail($recipient->email , $subject , $content,$params);
