@@ -21,8 +21,8 @@
     -->
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/mrtime.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.timer.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.timer.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/demo.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script> 
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-switch.css" />

@@ -80,6 +80,7 @@
                             <li role="presentation"><a href="/msfundy/box/index" role="menuitem" tabindex="-1">Wallets</a></li>
                             <li role="presentation"><a href="/msfundy/transaction/index" role="menuitem" tabindex="-1">Transactions</a></li>
                         <? } ?>
+                            <li role="presentation"><a href="/user/index/<?= $owner->id?>" role="menuitem" tabindex="-1">Profile</a></li>
                             <li role="presentation"><a href="/site/logout" role="menuitem" tabindex="-1">Logout</a></li>
                 </ul>
             </li>

@@ -5,8 +5,12 @@ class UserController extends Controller
 	public function accessRules()
 	{
 		return array(
+            array('allow',  // allow all users to perform 'index' and 'view' actions
+                'actions'=>array('index','confirm','confirmMember'),
+                'users'=>array('*'),
+            ),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('confirm','confirmMember'),
+				'actions'=>array('updateProfile','edit'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -19,10 +23,26 @@ class UserController extends Controller
 		);
 	}
 
-	public function actionIndex()
+	public function actionIndex($id)
 	{
-		$this->render('index');
+        $model = $this->loadModel($id);
+		$this->render('index',array('model' => $model));
 	}
+
+    /**
+     * Returns the data model based on the primary key given in the GET variable.
+     * If the data model is not found, an HTTP exception will be raised.
+     * @param integer $id the ID of the model to be loaded
+     * @return Transaction the loaded model
+     * @throws CHttpException
+     */
+    public function loadModel($id)
+    {
+        $model = User::model( )->findByPk($id);
+        if($model===null)
+            throw new CHttpException(404,'The requested page does not exist.');
+        return $model;
+    }
 
 	// Uncomment the following methods and override them if needed
 	/*
@@ -68,7 +88,7 @@ class UserController extends Controller
 	}
 
     public function actionConfirmMember(){
-        if(isset($_GET['key']) && isset($_GET['ac'] && isset($_GET['group'])) {
+        if(isset($_GET['key']) && isset($_GET['ac']) && isset($_GET['group'])) {
             $user = User::model()->findByAttributes(array(
                 'unique_id' => $_GET['key'] ,
                 'activation_code' => $_GET['ac'] ,
@@ -88,17 +108,42 @@ class UserController extends Controller
         } else $this->redirect('/');
     }
 
-
-	public function actionConfirmMember() {
-        if(isset($_GET['key']) && isset($_GET['ac'])) {
-            $user = User::model()->findByAttributes(array(
-                'unique_id' => $_GET['key'] ,
-                'activation_code' => $_GET['ac'] ,
-            ));
-            if(!$user || $user->is_activated ) $this->redirect('/');
-
-            if ($user->save(false)) $this->render('confirm', array('user'=>$user));
+    public function actionUpdateProfile($id){
+        $model=$this->loadModel($id);
+        $this->performAjaxValidation($model);
+        if(isset($_POST['User']))
+        {
+            $model->attributes=$_POST['User'];
+            $model->name = $_POST['User']['name'];
+            $model->currency = $_POST['User']['currency'];
+            if($model->save()){
+               print CJSON::encode(array(
+                    'status'=>true,
+                    'id'=>$model->id,
+                    'item'=>MyHtml::createUserProfileHtml($model),
+                ));
+            }
         }
-        else $this->redirect('/');
-	}
+        Yii::app()->end();
+    }
+
+    public function actionEdit($id)
+    {
+        $model= $this->loadModel($id);
+        print $this->renderPartial('_form', array('model'=>$model),true,true);
+        Yii::app()->end();
+    }
+
+    protected function performAjaxValidation($model)
+        {
+          if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+            {
+                $result = CActiveForm::validate($model);
+                if($model->hasErrors()){
+                    echo $result;
+                    Yii::app()->end();
+                }
+            }
+     }
+
 }

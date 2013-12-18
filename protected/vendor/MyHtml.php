@@ -50,12 +50,7 @@ HTML;
 
 public static function createActionItemHtml($model) {
   $status = $model->status?"checked":"";
-  $html = <<<HTML
-
-       
-          
-        
-      
+$html = <<<HTML
  <div id="action-{$model->id}" class="time-control" data-id="{$model->id}">
   <ul class="list-group">
     <li class="list-group-item">
@@ -83,6 +78,14 @@ public static function createActionItemHtml($model) {
             $('#switch-{$model->id}').bootstrapSwitch('setOffLabel', 'Stop');
           });
       </script>
+HTML;
+        return $html;
+    }
+
+    public static function createUserProfileHtml($model){
+$html = <<<HTML
+      Name: {$model->name}</br>
+      Currency: {$model->currency}</br>
 HTML;
         return $html;
     }
