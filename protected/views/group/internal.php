@@ -53,7 +53,7 @@ $this->breadcrumbs=array(
         'validateOnType'=>false,
         'afterValidate'=>"js:function(form, data, hasError){
             if(data.status == true){
-                
+                alert('Already send mail');
             }
         }"
     ),

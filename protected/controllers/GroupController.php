@@ -1,5 +1,4 @@
 <?php
-
 class GroupController extends Controller
 {
 	/**
@@ -113,6 +112,8 @@ class GroupController extends Controller
 		{
 			$model->attributes=$_POST['GroupUser'];
 			if($model->save()){
+				$group = Group::model( )->findByPk($model->group_id);
+				Sender::sendGroupMemberInvitationEmail($this->user,$group,$user);
 				echo CJSON::encode(array(
 					'status'=>true
 				));
