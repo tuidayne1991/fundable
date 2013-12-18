@@ -103,8 +103,6 @@ class UserController extends Controller
                 $group = Group::model( )->findByPk($group_id);
                 if($groupuser->save( )) $this->render('confirmMember', array('user'=>$user,'group' => $group));
             }
-            if ($user->save(false)) $this->render('confirm', array('user'=>$user));
-
         } else $this->redirect('/');
     }
 

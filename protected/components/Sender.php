@@ -2,7 +2,7 @@
 class Sender{
     public static function sendConfirmEmail($recipient){
         $prefix = "[".Yii::app()->name."]";
-        $subject = '{$prefix} Registration Confirmation';
+        $subject = "{$prefix} Registration Confirmation";
         $content = 'confirm_user_email';
         $params  = array('recipient'=>$recipient);
         Util::sendEmail($recipient->email , $subject , $content,$params);
