@@ -60,7 +60,7 @@ class User extends CActiveRecord
 			'transactions' => array(self::HAS_MANY, 'Transaction', 'owner_id'),
 			'actions' => array(self::HAS_MANY, 'Action', 'owner_id'),
 			'groupusers' => array(self::HAS_MANY, 'GroupUser', 'user_id'),
-			'groups' => array(self::HAS_MANY, 'Group', 'group_id', 'through'=>'groupusers'),
+			'groups' => array(self::HAS_MANY, 'Group', 'team_id', 'through'=>'groupusers'),
 			'projectusers' => array(self::HAS_MANY, 'ProjectUser', 'user_id'),
 			'projects' => array(self::HAS_MANY, 'Project', 'project_id', 'through'=>'projectusers'),
 			'tasks' => array(self::HAS_MANY, 'Task', 'assignee_id')

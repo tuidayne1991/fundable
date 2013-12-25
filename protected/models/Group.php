@@ -18,7 +18,7 @@ class Group extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'group';
+		return 'team';
 	}
 
 	/**

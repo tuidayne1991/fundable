@@ -62,28 +62,19 @@
             </li>
             <? } ?>
             <li>
-                <a class="dropdown-toggle" id="applst" data-toggle="dropdown" style="font-size:18px;color:white;">
-                    <i class="glyphicon glyphicon-th .white"></i>
-                </a>
-                
-                <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="applst" >
-                        <li role="presentation"><a href="/site/index" role="menuitem" tabindex="-1">Dr.Startup</a></li>
-                        <li role="presentation"><a href="/msfundy" role="menuitem" tabindex="-1">Ms.Fundy</a></li>
-                        <li role="presentation"><a href="/mrtime" role="menuitem" tabindex="-1">My Task</a></li>
-                </ul>
-            </li>
-            <li>
                 <a class="dropdown-toggle" id="dropdownmenu" data-toggle="dropdown" style="font-size:18px;color:white;">
                     <i class="glyphicon glyphicon-align-justify .white"></i>
                 </a>
                 
                 <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownmenu" >
+                        <li role="presentation"><a href="/site/index" role="menuitem" tabindex="-1">Home</a></li>
                         <? if($project == "msfundy"){ ?>
-                            <li role="presentation"><a href="/msfundy" role="menuitem" tabindex="-1">Home</a></li>
                             <li role="presentation"><a href="/msfundy/box/index" role="menuitem" tabindex="-1">Wallets</a></li>
                             <li role="presentation"><a href="/msfundy/transaction/index" role="menuitem" tabindex="-1">Transactions</a></li>
                         <? } ?>
-                            <li role="presentation"><a href="/user/index/<?= $owner->id?>" role="menuitem" tabindex="-1">Profile</a></li>
+                            <li role="presentation"><a href="/user/index/<?= $owner->id?>" role="menuitem" tabindex="-1">My Profile</a></li>
+                            <li role="presentation"><a href="/msfundy" role="menuitem" tabindex="-1">My Money</a></li>
+                            <li role="presentation"><a href="/mrtime" role="menuitem" tabindex="-1">My Task</a></li>
                             <li role="presentation"><a href="/site/logout" role="menuitem" tabindex="-1">Logout</a></li>
                 </ul>
             </li>

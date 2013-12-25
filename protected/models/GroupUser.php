@@ -20,7 +20,7 @@ class GroupUser extends CActiveRecord
 	public $email;
 	public function tableName()
 	{
-		return 'group_user';
+		return 'team_user';
 	}
 
 	/**
