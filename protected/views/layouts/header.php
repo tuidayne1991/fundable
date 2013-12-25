@@ -7,10 +7,6 @@
             $logo = "Ms.Fundy";
             $link = "/msfundy";
         break;
-        case "mrtime":
-            $logo = "Mr.Time";
-            $link = "/mrtime";
-        break;
         default:
             $logo = "Dr.Startup";
             $link = "/site/index";
@@ -30,12 +26,19 @@
       <? if($middle){ ?>
           <ul class="nav navbar-nav">
             <? if($isLogin){ ?>
-                <li class="active">
-                  
-                </li>
-                <li class="active" style="width: 930px;text-align:center">
+                <li class="active" style="width: 890px;text-align:center;">
                     <a href="/box/index">
-                        <?= $owner->total_balance ?> <?= $owner->currency ?>
+                        <?= $owner->name ?> - <?= $owner->total_balance ?> <?= $owner->currency ?>
+                    </a>
+                </li>
+            <? } ?>
+          </ul>
+      <? }else{ ?>
+            <ul class="nav navbar-nav">
+            <? if($isLogin){ ?>
+                <li class="active" style="width: 890px;text-align:center;">
+                    <a href="/user/profile">
+                        <?= $owner->name ?>
                     </a>
                 </li>
             <? } ?>
@@ -66,7 +69,7 @@
                 <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="applst" >
                         <li role="presentation"><a href="/site/index" role="menuitem" tabindex="-1">Dr.Startup</a></li>
                         <li role="presentation"><a href="/msfundy" role="menuitem" tabindex="-1">Ms.Fundy</a></li>
-                        <li role="presentation"><a href="/mrtime" role="menuitem" tabindex="-1">Mr.Time</a></li>
+                        <li role="presentation"><a href="/mrtime" role="menuitem" tabindex="-1">My Task</a></li>
                 </ul>
             </li>
             <li>

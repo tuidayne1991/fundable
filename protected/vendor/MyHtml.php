@@ -49,6 +49,11 @@ HTML;
     }
 
 public static function createActionItemHtml($model) {
+  if($model->status){
+    $duration = $model->duration + (strtotime(date('Y-m-d H:i:s')) - strtotime($model->start_time))*100;
+  }else{
+    $duration = $model->duration;
+  }
   $status = $model->status?"checked":"";
 $html = <<<HTML
  <div id="action-{$model->id}" class="time-control" data-id="{$model->id}">
@@ -69,7 +74,7 @@ $html = <<<HTML
       <script>
           $(function(){
             var status = "{$status}";
-            clocklst["mrtime{$model->id}"] = new MrTime("stopwatch-{$model->id}",{$model->duration});
+            clocklst["mrtime{$model->id}"] = new MrTime("stopwatch-{$model->id}",{$duration});
             if(status != "checked"){
               clocklst["mrtime{$model->id}"].Timer.pause();
             }
@@ -88,6 +93,15 @@ HTML;
 $html = <<<HTML
       Name: {$model->name}</br>
       {$currency}
+HTML;
+        return $html;
+    }
+
+    public static function createProjectMemberItemHtml($model){
+$html = <<<HTML
+    <li>
+      {$model->name}
+    </li>
 HTML;
         return $html;
     }

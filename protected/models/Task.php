@@ -1,24 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "group".
+ * This is the model class for table "task".
  *
- * The followings are the available columns in table 'group':
+ * The followings are the available columns in table 'task':
  * @property integer $id
  * @property string $name
  * @property string $description
+ * @property integer $assignee_id
  *
  * The followings are the available model relations:
- * @property GroupUser[] $groupUsers
+ * @property FundyUser $assignee
  */
-class Group extends CActiveRecord
+class Task extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'group';
+		return 'task';
 	}
 
 	/**
@@ -29,11 +30,12 @@ class Group extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description', 'required'),
-			array('name', 'length', 'max'=>200),
+			array('name, description, assignee_id, project_id', 'required'),
+			array('assignee_id', 'numerical', 'integerOnly'=>true),
+			array('name', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description', 'safe', 'on'=>'search'),
+			array('id, name, description, assignee_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,10 +47,8 @@ class Group extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'groupUsers' => array(self::HAS_MANY, 'GroupUser', 'group_id'),
-			'members' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "confirmed"'),
-			'pendingMembers' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "pending"'),
-			'projects' => array(self::HAS_MANY, 'Project', 'group_id'),
+			'assignee' => array(self::BELONGS_TO, 'FundyUser', 'assignee_id'),
+			'project' => array(self::BELONGS_TO, 'Project', 'project_id'),
 		);
 	}
 
@@ -61,6 +61,7 @@ class Group extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'description' => 'Description',
+			'assignee_id' => 'Assignee',
 		);
 	}
 
@@ -85,54 +86,18 @@ class Group extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('description',$this->description,true);
-
+		$criteria->compare('assignee_id',$this->assignee_id);
+		$criteria->compare('project_id',$this->project_id);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-	
-	public function addMember($owner,$role = "member"){
-		$model = GroupUser::model()->findByAttributes(array('user_id'=>$owner->id,'group_id'=>$this->id));
-        if(!$model){
-            $model = new GroupUser;
-            $model->email = $owner->email;
-            $model->user_id = $owner->id;
-            $model->group_id = $this->id;
-            $model->type = $role;
-            $model->status = 'confirmed';
-            if ($model->save()){
-            	return true;
 
-            }    
-        }
-        return false;
-	}
-
-	public function getAllAvailableMembers($project_id){
-		$members = $this->members;
-        $memberLst = array();
-        foreach($members as $member){
-        	$membership = ProjectUser::model()->findByAttributes(array('project_id' => $project_id,'user_id' => $member->id));
-        	if($membership == null){
-            	$memberLst[$member->id] = $member->name;
-        	}
-        }
-        return $memberLst;
-	}
-
-	public function getMemberIds(){
-		$members = $this->members;
-        $memberIds = array();
-        foreach($members as $member){
-            array_push($memberIds, $member->id);
-        }
-        return $memberIds;
-	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Group the static model class
+	 * @return Task the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

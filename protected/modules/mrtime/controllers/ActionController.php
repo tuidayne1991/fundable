@@ -97,9 +97,11 @@ class ActionController extends Controller
             if($model != null){
             	if($_POST['status'] == "true"){
             		$model->status = true;
+            		$model->start_time = date('Y-m-d H:i:s');
             	}else{
             		$model->status = false;
-            		$model->duration = 	isset($_POST['duration'])?$_POST['duration']:0;
+            		$model->end_time = date('Y-m-d H:i:s');
+            		$model->duration = $model->duration + (strtotime($model->end_time) - strtotime($model->start_time))*100;
             	}
             	if($model->save( )){
             		$result['status']=true;

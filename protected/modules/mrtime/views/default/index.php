@@ -19,6 +19,12 @@ $this->breadcrumbs=array(
             <?= MyHtml::createActionItemHtml($action) ?>
         <? } ?>
     </div>
+
+    <div id="task-container">
+        <? foreach($this->user->tasks as $task){?>
+            <?= $task->name ?>
+        <? } ?>
+    </div>
 </div>
 <script>
   $(document).ajaxComplete(function(event, xhr, settings) {

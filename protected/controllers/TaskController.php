@@ -1,6 +1,6 @@
 <?php
 
-class ProjectController extends Controller
+class TaskController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -32,7 +32,7 @@ class ProjectController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','addMember'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -56,53 +56,25 @@ class ProjectController extends Controller
 		));
 	}
 
-	public function actionAddMember( ){
-		if(isset($_POST['ProjectUser'])){
-			$newMember = new ProjectUser;
-			$newMember->setScenario('addMember');
-			$newMember->project_id = $_POST['ProjectUser']['project_id'];
-			$newMember->user_id = $_POST['ProjectUser']['user_id'];			
-			if($newMember->save( )){
-				echo CJSON::encode(array(
-					'status'=> true,
-					'id' => $newMember->user->id,
-					'item' => MyHtml::createProjectMemberItemHtml($newMember->user),
-				));	
-			}
-		}
-	}
-
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 	public function actionCreate()
 	{
-		$model=new Project;
+		$model=new Task;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Project']))
+		if(isset($_POST['Task']))
 		{
-			$model->attributes=$_POST['Project'];
-			$model->funding_status = "private";
-			$member->role = "manager";
-
-			if($model->save() && $member->save( )){
-				$member = new ProjectUser;
-				$member->user_id = $this->user->id;
-				$member->project_id = $model->id;
-
+			$model->attributes=$_POST['Task'];
+			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
-			}
-			var_dump($model->getErrors());
-			var_dump($member->getErrors());
-			exit(0);
 		}
-
-		if(isset($_POST['group'])){
-			$model->group_id = $_POST['group'];
+		if(isset($_POST['project'])){
+			$model->project_id = $_POST['project'];
 			$this->render('create',array(
 				'model'=>$model,
 			));
@@ -121,9 +93,9 @@ class ProjectController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Project']))
+		if(isset($_POST['Task']))
 		{
-			$model->attributes=$_POST['Project'];
+			$model->attributes=$_POST['Task'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -152,7 +124,7 @@ class ProjectController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Project');
+		$dataProvider=new CActiveDataProvider('Task');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -163,10 +135,10 @@ class ProjectController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Project('search');
+		$model=new Task('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Project']))
-			$model->attributes=$_GET['Project'];
+		if(isset($_GET['Task']))
+			$model->attributes=$_GET['Task'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -177,12 +149,11 @@ class ProjectController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Project the loaded model
+	 * @return Task the loaded model
 	 * @throws CHttpException
 	 */
-	public function loadModel($id)
-	{
-		$model=Project::model()->findByPk($id);
+	public function loadModel($id){
+		$model=Task::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -190,11 +161,11 @@ class ProjectController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Project $model the model to be validated
+	 * @param Task $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='project-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='task-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
