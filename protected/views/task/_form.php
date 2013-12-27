@@ -32,10 +32,37 @@
 	</div>
 
 	<div class="input-row">
+		<?php echo $form->labelEx($model,'deadline',array('class' => 'group-lb')); ?>
+	   <?
+	   	Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+	        $this->widget('CJuiDateTimePicker',array(
+	        	'model'=>$model,
+				'attribute' => 'deadline',
+				'value' => $model->deadline,
+	            'mode'=>'datetime', //use "time","date" or "datetime" (default)
+	            'options'=>array(
+	                'showSecond'=>false,
+	                'showAnim'=>'drop',
+	                'timeFormat'=>'hh:mm',
+	                'dateFormat'=>'yy-mm-dd',
+	                'showButtonPanel' => true,
+	            ),
+	            'htmlOptions'=>array(
+
+    			),
+	            'language'=>'en-AU',
+	    )); ?>
+		<?php echo $form->error($model,'deadline'); ?>
+	</div>
+	<? $contributors = $model->project->getMembersArray( );if($contributors != null){ ?>
+	<div class="input-row">
 		<?php echo $form->labelEx($model,'assignee_id',array('class' => 'group-lb')); ?>
-		<?php echo $form->dropDownList($model,'assignee_id',$model->project->getMembersArray( )); ?>
+		<?php echo $form->dropDownList($model,'assignee_id',$contributors); ?>
 		<?php echo $form->error($model,'assignee_id'); ?>
 	</div>
+	<? }else{ ?>
+		Nobody's available for this project, please add more people in your group to this project
+	<? } ?>
 	<?php echo $form->hiddenField($model,'project_id'); ?>
 	<div class="input-row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'btn btn-danger')); ?>

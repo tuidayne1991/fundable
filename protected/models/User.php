@@ -37,6 +37,7 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('email, password', 'required','on' => 'insert'),
+			array('name','required','on' => 'updateProfile'),
 			array('is_activated', 'numerical', 'integerOnly'=>true),
 			array('email, password', 'length', 'max'=>255),
 			array('old_password','checkOldPassword','on' => 'changePassword'),
@@ -59,8 +60,8 @@ class User extends CActiveRecord
 			'moneyBoxes' => array(self::HAS_MANY, 'MoneyBox', 'owner_id'),
 			'transactions' => array(self::HAS_MANY, 'Transaction', 'owner_id'),
 			'actions' => array(self::HAS_MANY, 'Action', 'owner_id'),
-			'groupusers' => array(self::HAS_MANY, 'GroupUser', 'user_id'),
-			'groups' => array(self::HAS_MANY, 'Group', 'team_id', 'through'=>'groupusers'),
+			'teamusers' => array(self::HAS_MANY, 'TeamUser', 'user_id'),
+			'teams' => array(self::HAS_MANY, 'Team', 'team_id', 'through'=>'teamusers'),
 			'projectusers' => array(self::HAS_MANY, 'ProjectUser', 'user_id'),
 			'projects' => array(self::HAS_MANY, 'Project', 'project_id', 'through'=>'projectusers'),
 			'tasks' => array(self::HAS_MANY, 'Task', 'assignee_id')
@@ -106,6 +107,22 @@ class User extends CActiveRecord
 			$this->encryptPassword( );
 		}
 		return parent::beforeSave();
+	}
+	public function setAvatar($status){
+		if(!$status){
+			Photo::model( )->updateAll(array('status' => false),'owner_id = :owner_id AND type = :type',array(':owner_id' => $this->id,':type' => 'user_avatar'));
+		}
+	}
+	public function getImage( ){
+		$photo = Photo::model( )->findByAttributes(
+			array(	'owner_id' => $this->id,
+					'type' => 'user_avatar',
+					'status' => true),
+			array('limit' => 1));
+		if($photo != null){
+			return $photo->url;
+		}
+		else return "/images/uploads/user/default.png";
 	}
 
 	/**

@@ -53,11 +53,11 @@
                 </a>
                 
                 <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="applst">    
-                        <? foreach($owner->groups as $group){ ?>
-                            <li role="presentation"><a href="/group/internal/<?= $group->id?>" role="menuitem" tabindex="-1" href="#"><?= $group->name ?></a></li>                            
+                        <? foreach($owner->teams as $team){ ?>
+                            <li role="presentation"><a href="/team/internal/<?= $team->id?>" role="menuitem" tabindex="-1" href="#"><?= $team->name ?></a></li>                            
                         <? } ?>
-                        <li role="presentation"><a href="/group/create" role="menuitem" tabindex="-1">
-                            <i class="glyphicon glyphicon-plus"></i> Create Group</a></li>
+                        <li role="presentation"><a href="/team/create" role="menuitem" tabindex="-1">
+                            <i class="glyphicon glyphicon-plus"></i> Create Team</a></li>
                 </ul>
             </li>
             <? } ?>

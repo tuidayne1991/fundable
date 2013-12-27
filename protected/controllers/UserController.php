@@ -10,7 +10,7 @@ class UserController extends Controller
                 'users'=>array('*'),
             ),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('updateProfile','edit','changePassword','loadpasswordform'),
+				'actions'=>array('updateProfile','edit','changePassword','loadpasswordform','uploadAvatar'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -87,6 +87,31 @@ class UserController extends Controller
             $this->redirect('/');
 	}
 
+    public function actionUploadAvatar( ){
+        $tmp_file = $_FILES['Filedata']['tmp_name'];
+        $url = "/images/uploads/user/".uniqid( ).".jpg";
+        $path = dirname(__FILE__)."/../../".$url;
+        move_uploaded_file($tmp_file, $path);
+
+        $this->user->setAvatar(false);
+        $avatar = new Photo; 
+        $avatar->owner_id = $this->user->id;
+        $avatar->location = $path;
+        $avatar->url = $url;
+        $avatar->type = "user_avatar";
+        $avatar->status = true;
+        if($avatar->save()){
+             print CJSON::encode(array(
+                    'status'=>true,
+                    'url'=>$avatar->url,
+            ));
+        }else{
+             print CJSON::encode(array(
+                    'status'=>false
+                ));
+        }
+    }
+
     public function actionConfirmMember(){
         if(isset($_GET['key']) && isset($_GET['ac']) && isset($_GET['group'])) {
             $user = User::model()->findByAttributes(array(
@@ -97,10 +122,10 @@ class UserController extends Controller
             if(!$user || !$user->is_activated){
                 $this->redirect('/');
             }
-            $groupuser = GroupUser::model( )->findByAttributes(array('user_id' => $user->id, 'group_id' => $group_id));
+            $groupuser = TeamUser::model( )->findByAttributes(array('user_id' => $user->id, 'team_id' => $group_id));
             if($groupuser != null){
                 $groupuser->status = "confirmed";
-                $group = Group::model( )->findByPk($group_id);
+                $group = Team::model( )->findByPk($group_id);
                 if($groupuser->save( )) $this->render('confirmMember', array('user'=>$user,'group' => $group));
             }
         }
@@ -115,6 +140,7 @@ class UserController extends Controller
             $model->attributes=$_POST['User'];
             $model->name = $_POST['User']['name'];
             $model->currency = $_POST['User']['currency'];
+            $model->setScenario('updateProfile');
             if($model->save()){
                print CJSON::encode(array(
                     'status'=>true,

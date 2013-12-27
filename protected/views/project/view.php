@@ -8,11 +8,12 @@ $this->breadcrumbs=array(
 );
 $newMember = new ProjectUser;
 $newMember->project_id = $model->id;
-$available = $model->group->getAllAvailableMembers($model->id)
+$available = $model->team->getAllAvailableMembers($model->id)
 ?>
 
 <h1><?php echo $model->name; ?></h1>
-<form action="/task/create" method="POST">
+by <a href="/project/id/1"><?= $model->team->name ?></a>    
+<form action="/task/create" method="GET">
     <input type="hidden" name="project" value="<?= $model->id?>"/>
     <button class="btn btn-danger">Create Task</button>
 </form>

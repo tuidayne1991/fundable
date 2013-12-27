@@ -1,5 +1,5 @@
 <?php
-class GroupController extends Controller
+class TeamController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -27,7 +27,7 @@ class GroupController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','addmember'),
+				'actions'=>array('view','addmember'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -36,7 +36,7 @@ class GroupController extends Controller
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('internal'),
-				'expression' => array('GroupController','allowOnlyMember')
+				'expression' => array('TeamController','allowOnlyMember')
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -69,7 +69,7 @@ class GroupController extends Controller
 		if(Yii::app()->user->isGuest){
 			return false;
 		}
-		$model = Group::model()->findByPk($_GET["id"]); 
+		$model = Team::model()->findByPk($_GET["id"]); 
         if($model != null && in_array(Yii::app()->user->_id,$model->getMemberIds())){
             return true;
         }
@@ -81,14 +81,14 @@ class GroupController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Group;
+		$model=new Team;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Group']))
+		if(isset($_POST['Team']))
 		{
-			$model->attributes=$_POST['Group'];
+			$model->attributes=$_POST['Team'];
 			if($model->save()){
 				$result = $model->addMember($this->user);
 				$this->redirect(array('view','id'=>$model->id));
@@ -101,20 +101,21 @@ class GroupController extends Controller
 	}
 
 	public function actionAddMember(){
-		$model=new GroupUser;
+		$model=new TeamUser;
 		$model->setScenario('addMember');
-		$user = User::model()->findByAttributes(array('email' => $_POST['GroupUser']['email']));
+		$user = User::model()->findByAttributes(array('email' => $_POST['TeamUser']['email']));
 		$model->user_id  = ($user != null)?$user->id:'-1';
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-		$this->performAjaxValidation($model,'group-user-form');
-		if(isset($_POST['GroupUser']))
+		$this->performAjaxValidation($model,'team-user-form');
+		if(isset($_POST['TeamUser']))
 		{
-			$model->attributes=$_POST['GroupUser'];
+			$model->attributes=$_POST['TeamUser'];
 			if($model->save()){
-				$group = Group::model( )->findByPk($model->group_id);
-				Sender::sendGroupMemberInvitationEmail($this->user,$group,$user);
+				$team = Team::model( )->findByPk($model->team_id);
+				Sender::sendGroupMemberInvitationEmail($this->user,$team
+					,$user);
 				echo CJSON::encode(array(
 					'status'=>true
 				));
@@ -135,9 +136,9 @@ class GroupController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Group']))
+		if(isset($_POST['Team']))
 		{
-			$model->attributes=$_POST['Group'];
+			$model->attributes=$_POST['Team'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -166,7 +167,7 @@ class GroupController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Group');
+		$dataProvider=new CActiveDataProvider('Team');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -177,10 +178,10 @@ class GroupController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Group('search');
+		$model=new Team('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Group']))
-			$model->attributes=$_GET['Group'];
+			$model->attributes=$_GET['Team'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -196,7 +197,7 @@ class GroupController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Group::model()->findByPk($id);
+		$model=Team::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -206,7 +207,7 @@ class GroupController extends Controller
 	 * Performs the AJAX validation.
 	 * @param Group $model the model to be validated
 	 */
-	protected function performAjaxValidation($model,$form = 'group-form')
+	protected function performAjaxValidation($model,$form = 'team-form')
 	{
 		if(isset($_POST['ajax']) && $_POST['ajax']=== $form)
 		{

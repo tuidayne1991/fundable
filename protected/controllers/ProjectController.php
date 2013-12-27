@@ -61,12 +61,21 @@ class ProjectController extends Controller
 			$newMember = new ProjectUser;
 			$newMember->setScenario('addMember');
 			$newMember->project_id = $_POST['ProjectUser']['project_id'];
-			$newMember->user_id = $_POST['ProjectUser']['user_id'];			
+			$newMember->user_id = $_POST['ProjectUser']['user_id'];
+			$newMember->role = "contributor";	
 			if($newMember->save( )){
+				$project = Project::model( )->findByPk($newMember->project_id);
+				$member = User::model( )->findByPk($newMember->user_id);
+				Sender::sendProjectAddedNotificationEmail($this->user,$project,$member);
 				echo CJSON::encode(array(
 					'status'=> true,
 					'id' => $newMember->user->id,
 					'item' => MyHtml::createProjectMemberItemHtml($newMember->user),
+				));	
+			}
+			else{
+				echo CJSON::encode(array(
+					'status'=> false,
 				));	
 			}
 		}
@@ -87,22 +96,16 @@ class ProjectController extends Controller
 		{
 			$model->attributes=$_POST['Project'];
 			$model->funding_status = "private";
-			$member->role = "manager";
-
-			if($model->save() && $member->save( )){
-				$member = new ProjectUser;
-				$member->user_id = $this->user->id;
-				$member->project_id = $model->id;
-
-				$this->redirect(array('view','id'=>$model->id));
+			
+			if($model->save()){
+				if($model->addMember($this->user,'manager'))$this->redirect(array('view','id'=>$model->id));
 			}
-			var_dump($model->getErrors());
-			var_dump($member->getErrors());
+			var_dump($member->getErrors( ));
 			exit(0);
 		}
 
-		if(isset($_POST['group'])){
-			$model->group_id = $_POST['group'];
+		if(isset($_GET['team'])){
+			$model->team_id = $_GET['team'];
 			$this->render('create',array(
 				'model'=>$model,
 			));

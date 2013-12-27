@@ -10,15 +10,15 @@ $this->breadcrumbs=array(
 <h1><?= $model->name ?> Internal</h1>
 
 <div>
-    <form action="/event/create" method="POST">
-        <input type="hidden" name="group" value="<?= $model->id ?>" />
+    <form action="/event/create" method="GET">
+        <input type="hidden" name="team" value="<?= $model->id ?>" />
         <button type="submit" class="btn btn-danger">Create Event</button>
     </form>
-    <form action="/project/create" method="POST">
-        <input type="hidden" name="group" value="<?= $model->id ?>" />
+    <form action="/project/create" method="GET">
+        <input type="hidden" name="team" value="<?= $model->id ?>" />
         <button type="submit" class="btn btn-danger">Create Project</button>
     </form>
-    <a href="/group/view/id/<?= $model->id?>" class="btn btn-danger">View Page</a>
+    <a href="/team/view/id/<?= $model->id?>" class="btn btn-danger">View Page</a>
 </div>
 <div>
     <h2>Project</h2>
@@ -48,13 +48,13 @@ $this->breadcrumbs=array(
     </ul>
     <h2>Add Member</h2>
     <? 
-        $newMember = new GroupUser; 
-        $newMember->group_id = $model->id;
+        $newMember = new TeamUser; 
+        $newMember->team_id = $model->id;
         $newMember->type = "member";
     ?>
 <?php $form=$this->beginWidget('CActiveForm', array(
-    'id'=>'group-user-form',
-    'action'=>'/group/addmember',
+    'id'=>'team-user-form',
+    'action'=>'/team/addmember',
     // Please note: When you enable ajax validation, make sure the corresponding
     // controller action is handling ajax validation correctly.
     // There is a call to performAjaxValidation() commented in generated controller code.
@@ -74,12 +74,12 @@ $this->breadcrumbs=array(
         }"
     ),
 )); ?>
-            <div class="form-group">
+            <div class="form-team">
                     <?php echo $form->textField($newMember,'email',array('class' => 'form-control','placeholder' => 'Enter email')); ?>
-                    <?php echo $form->hiddenField($newMember,'group_id'); ?>
+                    <?php echo $form->hiddenField($newMember,'team_id'); ?>
                     <?php echo $form->hiddenField($newMember,'type'); ?>
             </div>
-            <div class="form-group">
+            <div class="form-team">
                 <?php echo CHtml::submitButton('Add',array('class' => 'btn btn-danger')); ?>
             </div>
             <br/>

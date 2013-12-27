@@ -30,7 +30,7 @@ class Task extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description, assignee_id, project_id', 'required'),
+			array('name, description, assignee_id, project_id,deadline', 'required'),
 			array('assignee_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>100),
 			// The following rule is used by search().
@@ -47,7 +47,7 @@ class Task extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'assignee' => array(self::BELONGS_TO, 'FundyUser', 'assignee_id'),
+			'assignee' => array(self::BELONGS_TO, 'User', 'assignee_id'),
 			'project' => array(self::BELONGS_TO, 'Project', 'project_id'),
 		);
 	}
@@ -62,6 +62,7 @@ class Task extends CActiveRecord
 			'name' => 'Name',
 			'description' => 'Description',
 			'assignee_id' => 'Assignee',
+			'deadline' => 'Deadline'
 		);
 	}
 
@@ -88,6 +89,7 @@ class Task extends CActiveRecord
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('assignee_id',$this->assignee_id);
 		$criteria->compare('project_id',$this->project_id);
+		$criteria->compare('deadline',$this->deadline);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

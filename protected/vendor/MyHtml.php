@@ -48,6 +48,29 @@ HTML;
         return $html;
     }
 
+public static function createTaskItemHtml($model){
+  $status = "";
+  $html = <<<HTML
+ <div id="action-{$model->id}" class="time-control" data-id="{$model->id}">
+  <ul class="list-group">
+    <li class="list-group-item">
+        <div id= "switch-{$model->id}" class="make-switch js-switch-time-btn" data-on-label="YES" data-off-label="NO" data-id="{$model->id}">
+            <input type="checkbox" {$status}>
+        </div>
+        {$model->name}
+        <div class="pull-right">
+           <span id="stopwatch-{$model->id}">00:00:00</span>
+        </div>
+    </li>
+    <!-- <li class="list-group-item"><a id="js-delete-action" data-id="{$model->id}" style="color:black"><i class="glyphicon glyphicon-trash"></i></a></li> -->
+    <li class="list-group-item">{$model->description}</li>
+  </ul> 
+  </div>
+HTML;
+        return $html;
+
+}
+
 public static function createActionItemHtml($model) {
   if($model->status){
     $duration = $model->duration + (strtotime(date('Y-m-d H:i:s')) - strtotime($model->start_time))*100;
@@ -91,7 +114,7 @@ HTML;
       $isOwner = !Yii::app()->user->isGuest && Yii::app()->user->_id == $model->id;
       $currency = $isOwner?"Currency: {$model->currency}</br>":"";
 $html = <<<HTML
-      Name: {$model->name}</br>
+      <h3>{$model->name}</h3>
       {$currency}
 HTML;
         return $html;

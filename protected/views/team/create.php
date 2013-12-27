@@ -9,6 +9,6 @@ $this->breadcrumbs=array(
 
 ?>
 
-<h1>Create Group</h1>
+<h1>Create Team</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

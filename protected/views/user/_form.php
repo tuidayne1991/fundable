@@ -23,6 +23,7 @@
                 $('#profile-container').html(data.item);
                 $('#profile-form-container').hide();
                 $('#js-update-profile').show( );
+                $('#update-btn-panel').show( );
             }
         }"
     ),

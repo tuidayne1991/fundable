@@ -11,7 +11,7 @@
  * The followings are the available model relations:
  * @property GroupUser[] $groupUsers
  */
-class Group extends CActiveRecord
+class Team extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
@@ -45,10 +45,10 @@ class Group extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'groupUsers' => array(self::HAS_MANY, 'GroupUser', 'group_id'),
-			'members' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "confirmed"'),
-			'pendingMembers' => array(self::MANY_MANY, 'User', 'group_user(group_id, user_id)','condition'=>'status = "pending"'),
-			'projects' => array(self::HAS_MANY, 'Project', 'group_id'),
+			'teamUsers' => array(self::HAS_MANY, 'TeamUser', 'team_id'),
+			'members' => array(self::MANY_MANY, 'User', 'team_user(team_id, user_id)','condition'=>'status = "confirmed"'),
+			'pendingMembers' => array(self::MANY_MANY, 'User', 'team_user(team_id, user_id)','condition'=>'status = "pending"'),
+			'projects' => array(self::HAS_MANY, 'Project', 'team_id'),
 		);
 	}
 
@@ -92,12 +92,12 @@ class Group extends CActiveRecord
 	}
 	
 	public function addMember($owner,$role = "member"){
-		$model = GroupUser::model()->findByAttributes(array('user_id'=>$owner->id,'group_id'=>$this->id));
+		$model = TeamUser::model()->findByAttributes(array('user_id'=>$owner->id,'team_id'=>$this->id));
         if(!$model){
-            $model = new GroupUser;
+            $model = new TeamUser;
             $model->email = $owner->email;
             $model->user_id = $owner->id;
-            $model->group_id = $this->id;
+            $model->team_id = $this->id;
             $model->type = $role;
             $model->status = 'confirmed';
             if ($model->save()){

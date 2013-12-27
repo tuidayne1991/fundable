@@ -70,11 +70,13 @@ class TaskController extends Controller
 		if(isset($_POST['Task']))
 		{
 			$model->attributes=$_POST['Task'];
-			if($model->save())
+			if($model->save()){
+				Sender::sendTaskAssignmentNotificationEmail($this->user,$model,$model->assignee);
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
-		if(isset($_POST['project'])){
-			$model->project_id = $_POST['project'];
+		if(isset($_GET['project'])){
+			$model->project_id = $_GET['project'];
 			$this->render('create',array(
 				'model'=>$model,
 			));

@@ -30,7 +30,7 @@
 		<?php echo $form->textArea($model,'description'); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
-	<?php echo $form->hiddenField($model,'group_id'); ?>
+	<?php echo $form->hiddenField($model,'team_id'); ?>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn btn-danger')); ?>
 	</div>

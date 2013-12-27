@@ -84,7 +84,7 @@
 	                'showButtonPanel' => true,
 	            ),
 	            'htmlOptions'=>array(
-        			'class'=>'form-control'
+        			'style'=>'background-color:blue;margin-top:20px;',
     			),
 	            'language'=>'en-AU',
 	    )); ?>

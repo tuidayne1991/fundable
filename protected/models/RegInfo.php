@@ -34,7 +34,7 @@ class RegInfo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email, password,re_password,re_email', 'required'),
+			array('email, password,re_password,re_email,name', 'required'),
 			array('is_activated', 'numerical', 'integerOnly'=>true),
 			array('email, password', 'length', 'max'=>255),
 			array('email' , 'checkUnique'),
@@ -74,6 +74,7 @@ class RegInfo extends CActiveRecord
 			'password' => 'Password',
 			're_password' => 'Confirm Password',
 			'is_activated' => 'Is Activated',
+			'name' => 'Full Name'
 		);
 	}
 

@@ -1,26 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "project".
+ * This is the model class for table "photo".
  *
- * The followings are the available columns in table 'project':
+ * The followings are the available columns in table 'photo':
  * @property integer $id
- * @property integer $group_id
- * @property integer $group_name
- * @property integer $description
- * @property string $funding_status
- *
- * The followings are the available model relations:
- * @property Group $group
+ * @property integer $owner_id
+ * @property string $type
+ * @property string $url
  */
-class Project extends CActiveRecord
+class Photo extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'project';
+		return 'photo';
 	}
 
 	/**
@@ -31,11 +27,12 @@ class Project extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('team_id, name, description, funding_status', 'required'),
-			array('funding_status', 'length', 'max'=>20),
+			array('owner_id, type, url', 'required'),
+			array('owner_id', 'numerical', 'integerOnly'=>true),
+			array('type', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, team_id, name, description, funding_status', 'safe', 'on'=>'search'),
+			array('id, owner_id, type, url', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,9 +44,6 @@ class Project extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'team' => array(self::BELONGS_TO, 'Team', 'team_id'),
-			'members' => array(self::MANY_MANY, 'User', 'project_user(project_id, user_id)'),
-			'tasks' => array(self::HAS_MANY, 'TASK', 'project_id'),
 		);
 	}
 
@@ -60,10 +54,9 @@ class Project extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'team_id' => 'Team',
-			'project_name' => 'Project Name',
-			'description' => 'Description',
-			'funding_status' => 'Funding Status',
+			'owner_id' => 'Owner',
+			'type' => 'Type',
+			'url' => 'Url',
 		);
 	}
 
@@ -86,38 +79,20 @@ class Project extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('project_id',$this->project_id);
-		$criteria->compare('name',$this->name);
-		$criteria->compare('description',$this->description);
-		$criteria->compare('funding_status',$this->funding_status,true);
+		$criteria->compare('owner_id',$this->owner_id);
+		$criteria->compare('type',$this->type,true);
+		$criteria->compare('url',$this->url,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-	
-	public function addMember($user,$role){
-		$member = new ProjectUser;
-		$member->role = "manager";
-		$member->user_id = $user->id;
-		$member->project_id = $this->id;
-		if($member->save( ))return true;
-		return false;
-	}
-	public function getMembersArray( ){
-		$members = $this->members;
-        $memberLst = array();
-        foreach($members as $member){
-            $memberLst[$member->id] = $member->name;
-        }
-        return $memberLst;
 	}
 
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Project the static model class
+	 * @return Photo the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

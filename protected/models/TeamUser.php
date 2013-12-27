@@ -12,7 +12,7 @@
  * @property FundyUser $user
  * @property Group $group
  */
-class GroupUser extends CActiveRecord
+class TeamUser extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
@@ -34,12 +34,12 @@ class GroupUser extends CActiveRecord
 			array('email','email'),
 			array('email','checkExist','on' =>'addMember'),
 			array('email','checkUnique','on' =>'addMember'),
-			array('group_id,type', 'required'),
-			array('group_id, user_id', 'numerical', 'integerOnly'=>true),
+			array('team_id,type', 'required'),
+			array('team_id, user_id', 'numerical', 'integerOnly'=>true),
 			array('type', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('group_id, user_id, type', 'safe', 'on'=>'search'),
+			array('team_id, user_id, type', 'safe', 'on'=>'search'),
 		);
 	}
 	
@@ -56,15 +56,15 @@ class GroupUser extends CActiveRecord
     public function checkUnique($attribute , $params) {
         $error_message1 = Yii::t('app' , 'This user\'s already in this group');
         $error_message2 = Yii::t('app' , 'This user was added but didn\'t confirm yet');
-        	$groupuser = GroupUser::model()->findByAttributes(
+        	$teamuser = TeamUser::model()->findByAttributes(
         		array(
-        			'group_id' => $this->group_id,
+        			'team_id' => $this->team_id,
         			'user_id' => $this->user_id
         		)
         	);
 
-        	if($groupuser != null){
-        		if($groupuser->status == 'confirmed'){
+        	if($teamuser != null){
+        		if($teamuser->status == 'confirmed'){
         			$this->addError($attribute , $error_message1);
         		}else{
         			$this->addError($attribute , $error_message2);
@@ -122,7 +122,7 @@ class GroupUser extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'user' => array(self::BELONGS_TO, 'FundyUser', 'user_id'),
-			'group' => array(self::BELONGS_TO, 'Group', 'group_id'),
+			'team' => array(self::BELONGS_TO, 'Group', 'team_id'),
 		);
 	}
 
@@ -132,7 +132,7 @@ class GroupUser extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'group_id' => 'Group',
+			'team_id' => 'Group',
 			'user_id' => 'User',
 			'type' => 'Type',
 		);
@@ -156,7 +156,7 @@ class GroupUser extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('group_id',$this->group_id);
+		$criteria->compare('team_id',$this->team_id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('type',$this->type,true);
 

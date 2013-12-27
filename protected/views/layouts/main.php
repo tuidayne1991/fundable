@@ -23,6 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/upclick.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-switch.js"></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-switch.css" />
