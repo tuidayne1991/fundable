@@ -12,7 +12,14 @@ $available = $model->team->getAllAvailableMembers($model->id)
 ?>
 
 <h1><?php echo $model->name; ?></h1>
-by <a href="/project/id/1"><?= $model->team->name ?></a>    
+by <a href="/project/id/1"><?= $model->team->name ?></a>
+<div>
+    <img src="<?= $model->logo ?>" class="thumbnail" id="avatar" style="width:150px;height:150px;top:60px;left:120px" />
+    <input type="file" id="source" style="display:none;"/>
+    <button id="avatarEditBtn" class="btn btn-info" style="display:none;margin-left:50px;margin-top:-100px;position:absolute">
+        <?=Yii::t('app', 'Edit')?>
+    </button>
+</div>
 <form action="/task/create" method="GET">
     <input type="hidden" name="project" value="<?= $model->id?>"/>
     <button class="btn btn-danger">Create Task</button>
@@ -65,3 +72,39 @@ by <a href="/project/id/1"><?= $model->team->name ?></a>
 <? }else{ ?>
     We dont have any Available members in group to add
 <? } ?>
+
+<?
+$avatar_update_script = <<<EO_SCRIPT
+            // blur event
+        $("#avatar").mouseover(function( ){
+            $('#avatarEditBtn').show();
+        });
+
+        $("#avatar").mouseout(function( ){
+            $('#avatarEditBtn').hide();
+        });
+
+        $("#avatarEditBtn").mouseover(function( ){
+            $('#avatarEditBtn').show();
+        });
+
+        var uploader = document.getElementById('avatarEditBtn');
+        upclick({
+            element: uploader,
+            action: '/project/uploadLogo',
+            action_params: {project_id:{$model->id}},
+            oncomplete:
+            function(response_data){
+                var result = JSON.parse(response_data);
+                if(result.status){
+                    $("#avatar").attr("src",result.url);
+                    $('#avatarEditBtn').hide();
+                }
+                else{
+                    console.log("Error upload avatar");
+                }
+            }
+        });
+EO_SCRIPT;
+    Yii::app()->clientScript->registerScript('avatar_update', $avatar_update_script, CClientScript::POS_READY);
+?>

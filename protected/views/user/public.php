@@ -2,7 +2,7 @@
 /* @var $this UserController */
 $isOwner = !Yii::app()->user->isGuest && Yii::app()->user->_id == $model->id;
 $this->breadcrumbs=array(
-	'User',
+    'User',
 );
 ?>
 <br>
@@ -15,9 +15,11 @@ $this->breadcrumbs=array(
                 <?=Yii::t('app', 'Edit')?>
             </button>
     </div>
-    <div>
-        <a href="/user/public/<?= $model->id?>">Public</a> | <a href="/user/private">Private</a>
-    </div>
+    <? if($isOwner){ ?>
+        <div>
+            <a href="/user/public/<?= $model->id?>">Public</a> | <a href="/user/private">Private</a>
+        </div>
+    <? } ?>
     <div id="profile-container">
         <?= MyHtml::createUserProfileHtml($model) ?>
     </div>

@@ -119,6 +119,9 @@ class Team extends CActiveRecord
         }
         return $memberLst;
 	}
+public function getUrl(){
+        return "/team/view/id/".$this->id;
+    }
 
 	public function getMemberIds(){
 		$members = $this->members;

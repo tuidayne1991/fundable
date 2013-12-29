@@ -32,7 +32,7 @@ class TaskController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','switch','assigneeEdit','assigneeUpdate'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -81,6 +81,32 @@ class TaskController extends Controller
 				'model'=>$model,
 			));
 		}
+	}
+
+	public function actionAssigneeEdit( ){
+		if(isset($_POST['id'])) {
+            $id = $_POST['id'];
+            $model=$this->loadModel($id);
+            print $this->renderPartial('_assignee_form', array('model'=>$model),true,true);
+        }
+	}
+
+	public function actionAssigneeUpdate($id){
+		$model=$this->loadModel($id);
+		$this->performAjaxValidation($model);
+		if(isset($_POST['Task'])) {
+            $model->attributes=$_POST['Task'];
+            if($model->save()){
+               echo CJSON::encode(array(
+                    'id'=>$model->id,
+                    'status'=>true,
+                    'item'=>MyHtml::createTaskItemHtml($model),
+                ));
+            }else{
+                MyLog::debug(print_r($model->getErrors(), true));
+            }
+        }
+		Yii::app()->end();
 	}
 
 	/**
@@ -147,6 +173,42 @@ class TaskController extends Controller
 		));
 	}
 
+	public function actionSwitch()
+	{
+		$result = array('status'=>false);
+        if(isset($_POST['id']) && isset($_POST['status'])) {
+            $id = $_POST['id'];
+            $model = $this->loadModel($id);
+            if($_POST['status'] == "true"){
+            	$model->status = true;
+            	$model->start_time = date('Y-m-d H:i:s');
+            }
+            else{
+            	$model->status = false;
+            	$model->end_time = date('Y-m-d H:i:s');
+            	$model->duration = $model->duration + (strtotime($model->end_time) - strtotime($model->start_time))*100;
+            }
+            if($model->save( )){
+            	$result['status']=true;
+            }
+            /*
+            if($model != null){
+            	if($_POST['status'] == "true"){
+            		$model->status = true;
+            		$model->start_time = date('Y-m-d H:i:s');
+            	}else{
+            		$model->status = false;
+            		$model->end_time = date('Y-m-d H:i:s');
+            		$model->duration = $model->duration + (strtotime($model->end_time) - strtotime($model->start_time))*100;
+            	}
+            	if($model->save( )){
+            		$result['status']=true;
+            	}
+            }
+            */
+        }
+        print CJSON::encode($result);
+	}
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
@@ -169,8 +231,11 @@ class TaskController extends Controller
 	{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='task-form')
 		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
+			$result = CActiveForm::validate($model);
+            if($model->hasErrors()){
+			    echo $result;
+			    Yii::app()->end();
+            }
 		}
 	}
 }

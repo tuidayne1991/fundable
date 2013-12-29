@@ -93,6 +93,7 @@ class ActionController extends Controller
 		$result = array('status'=>false);
         if(isset($_POST['id']) && isset($_POST['status'])) {
             $id = $_POST['id'];
+            /*
             $model = $this->loadModel($id);
             if($model != null){
             	if($_POST['status'] == "true"){
@@ -107,6 +108,7 @@ class ActionController extends Controller
             		$result['status']=true;
             	}
             }
+            */
         }
         print CJSON::encode($result);
 	}
@@ -134,8 +136,7 @@ class ActionController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
-	}
-
+	}	
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.

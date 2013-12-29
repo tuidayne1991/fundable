@@ -1,6 +1,6 @@
 <?php
 
-class ProjectController extends Controller
+class ContactController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -32,7 +32,7 @@ class ProjectController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','addMember','uploadLogo'),
+				'actions'=>array('create','update','loadSmallForm'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -56,61 +56,35 @@ class ProjectController extends Controller
 		));
 	}
 
-	public function actionAddMember( ){
-		if(isset($_POST['ProjectUser'])){
-			$newMember = new ProjectUser;
-			$newMember->setScenario('addMember');
-			$newMember->project_id = $_POST['ProjectUser']['project_id'];
-			$newMember->user_id = $_POST['ProjectUser']['user_id'];
-			$newMember->role = "contributor";	
-			if($newMember->save( )){
-				$project = Project::model( )->findByPk($newMember->project_id);
-				$member = User::model( )->findByPk($newMember->user_id);
-				Sender::sendProjectAddedNotificationEmail($this->user,$project,$member);
-				echo CJSON::encode(array(
-					'status'=> true,
-					'id' => $newMember->user->id,
-					'item' => MyHtml::createProjectMemberItemHtml($newMember->user),
-				));	
-			}
-			else{
-				echo CJSON::encode(array(
-					'status'=> false,
-				));	
-			}
-		}
-	}
-
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 	public function actionCreate()
 	{
-		$model=new Project;
-
+		$model=new Contact;
+		$this->performAjaxValidation($model);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Project']))
+		if(isset($_POST['Contact']))
 		{
-			$model->attributes=$_POST['Project'];
-			$model->funding_status = "private";
-			
+			$model->attributes=$_POST['Contact'];
 			if($model->save()){
-				if($model->addMember($this->user,'manager'))$this->redirect(array('view','id'=>$model->id));
+				echo CJSON::encode(array(
+					'status'=>true,
+					'id'=>$model->id,
+					'item'=>MyHtml::createContactItemHtml($model),
+				));
+				Yii::app()->end();
 			}
-			var_dump($member->getErrors( ));
-			exit(0);
 		}
-
-		if(isset($_GET['team'])){
-			$model->team_id = $_GET['team'];
-			$this->render('create',array(
-				'model'=>$model,
-			));
-		}
+		$this->render('create',array(
+			'model'=>$model,
+		));
 	}
+	
+
 
 	/**
 	 * Updates a particular model.
@@ -124,9 +98,9 @@ class ProjectController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Project']))
+		if(isset($_POST['Contact']))
 		{
-			$model->attributes=$_POST['Project'];
+			$model->attributes=$_POST['Contact'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -134,6 +108,14 @@ class ProjectController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionLoadSmallForm()
+	{
+		$model=new Contact;
+        $model->owner_id = Yii::app( )->user->_id;
+        print $this->renderPartial('_small_form', array('model'=>$model,'owner' => $this->user),true,true);
+        Yii::app()->end();
 	}
 
 	/**
@@ -155,7 +137,7 @@ class ProjectController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Project');
+		$dataProvider=new CActiveDataProvider('Contact');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -166,55 +148,26 @@ class ProjectController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Project('search');
+		$model=new Contact('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Project']))
-			$model->attributes=$_GET['Project'];
+		if(isset($_GET['Contact']))
+			$model->attributes=$_GET['Contact'];
 
 		$this->render('admin',array(
 			'model'=>$model,
 		));
 	}
 
-
-    public function actionUploadLogo( ){
-        $tmp_file = $_FILES['Filedata']['tmp_name'];
-        $url = "/images/uploads/project/".uniqid( ).".jpg";
-        $path = dirname(__FILE__)."/../../".$url;
-        move_uploaded_file($tmp_file, $path);
-        if(isset($_POST['project_id'])){
-        	$project_id = $_POST['project_id'];
-        	$project = $this->loadModel($project_id);
-        	$project->setLogo(false);
-	        $logo = new Photo; 
-	        $logo->owner_id = $project_id;
-	        $logo->location = $path;
-	        $logo->url = $url;
-	        $logo->type = "project_logo";
-	        $logo->status = true;
-	        if($logo->save()){
-	             print CJSON::encode(array(
-	                    'status'=>true,
-	                    'url'=>$logo->url,
-	         	));
-	            Yii::app()->end();
-        	}
-        }
-        print CJSON::encode(array(
-	    	'status'=>false
-	    ));
-	    Yii::app()->end();
-    }
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Project the loaded model
+	 * @return Contact the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Project::model()->findByPk($id);
+		$model=Contact::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -222,14 +175,17 @@ class ProjectController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Project $model the model to be validated
+	 * @param Contact $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='project-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='contact-form')
 		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
+			$result = CActiveForm::validate($model);
+            if($model->hasErrors()){
+			    echo $result;
+			    Yii::app()->end();
+            }
 		}
 	}
 }

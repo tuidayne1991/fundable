@@ -6,11 +6,11 @@ class UserController extends Controller
 	{
 		return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('index','confirm','confirmMember'),
+                'actions'=>array('confirm','confirmMember','public'),
                 'users'=>array('*'),
             ),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('updateProfile','edit','changePassword','loadpasswordform','uploadAvatar'),
+				'actions'=>array('updateProfile','edit','changePassword','loadpasswordform','uploadAvatar','private'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -29,6 +29,13 @@ class UserController extends Controller
 		$this->render('index',array('model' => $model));
 	}
 
+    public function actionPublic($id){
+        $model = $this->loadModel($id);
+        $this->render('public',array('model' => $model));
+    }
+    public function actionPrivate( ){
+        $this->render('private',array('model' => $this->user));
+    }
     /**
      * Returns the data model based on the primary key given in the GET variable.
      * If the data model is not found, an HTTP exception will be raised.
@@ -111,6 +118,7 @@ class UserController extends Controller
                 ));
         }
     }
+
 
     public function actionConfirmMember(){
         if(isset($_GET['key']) && isset($_GET['ac']) && isset($_GET['group'])) {

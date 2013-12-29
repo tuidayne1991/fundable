@@ -112,6 +112,26 @@ class Project extends CActiveRecord
         }
         return $memberLst;
 	}
+	
+	public function setLogo($status){
+		if(!$status){
+			Photo::model( )->updateAll(array('status' => false),'owner_id = :owner_id AND type = :type',array(':owner_id' => $this->id,':type' => 'project_logo'));
+		}
+	}
+	public function getUrl(){
+		return "/project/view/id/".$this->id;
+	}
+	public function getLogo( ){
+		$photo = Photo::model( )->findByAttributes(
+			array(	'owner_id' => $this->id,
+					'type' => 'project_logo',
+					'status' => true),
+			array('limit' => 1));
+		if($photo != null){
+			return $photo->url;
+		}
+		return "/images/uploads/project/default.jpg";
+	}
 
 	/**
 	 * Returns the static model of the specified AR class.

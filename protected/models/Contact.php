@@ -1,25 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "task".
+ * This is the model class for table "contact".
  *
- * The followings are the available columns in table 'task':
+ * The followings are the available columns in table 'contact':
  * @property integer $id
- * @property string $name
- * @property string $description
- * @property integer $assignee_id
+ * @property integer $owner_id
+ * @property integer $drstartup_id
+ * @property string $contact_json
  *
  * The followings are the available model relations:
- * @property FundyUser $assignee
+ * @property FundyUser $owner
  */
-class Task extends CActiveRecord
+class Contact extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'task';
+		return 'contact';
 	}
 
 	/**
@@ -30,14 +30,12 @@ class Task extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('progress,name, description, assignee_id, project_id,deadline', 'required'),
-			array('assignee_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>100),
-			array('progress', 'numerical', 'min'=>0),
-			array('progress', 'numerical', 'max'=>100),
+			array('owner_id, email,name', 'required'),
+			array('owner_id', 'numerical', 'integerOnly'=>true),
+			array('email','email'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description, assignee_id', 'safe', 'on'=>'search'),
+			array('id, owner_id, email, contact_json', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,8 +47,7 @@ class Task extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'assignee' => array(self::BELONGS_TO, 'User', 'assignee_id'),
-			'project' => array(self::BELONGS_TO, 'Project', 'project_id'),
+			'owner' => array(self::BELONGS_TO, 'FundyUser', 'owner_id'),
 		);
 	}
 
@@ -61,10 +58,10 @@ class Task extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
-			'assignee_id' => 'Assignee',
-			'deadline' => 'Deadline'
+			'owner_id' => 'Owner',
+			'email' => 'Email',
+			'contact_json' => 'Contact Json',
+			'name' => 'Name'
 		);
 	}
 
@@ -87,22 +84,26 @@ class Task extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('description',$this->description,true);
-		$criteria->compare('assignee_id',$this->assignee_id);
-		$criteria->compare('project_id',$this->project_id);
-		$criteria->compare('deadline',$this->deadline);
-		$criteria->compare('progress',$this->progress);
+		$criteria->compare('owner_id',$this->owner_id);
+		$criteria->compare('email',$this->email);
+		$criteria->compare('contact_json',$this->contact_json,true);
+		$criteria->compare('name',$this->name);
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function getImage( ){
+		$ran_num = rand(1, 5);
+		return "/images/uploads/contact/default{$ran_num}.png";
 	}
 
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Task the static model class
+	 * @return Contact the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
