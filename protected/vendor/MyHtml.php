@@ -74,11 +74,10 @@ public static function createTaskItemHtml($model){
           </div>
           <div>
             <div style="float:left;margin-left:10px;font-size:18px;color: #353535;">
-              Task #{$model->id}: <a href="/task/view/id/{$model->id}">{$model->name}</a>
+              <a href="{$model->project->url}">{$model->project->name}</a>#{$model->task_code}: <a href="/task/view/id/{$model->id}">{$model->name}</a>
             </div>
             <br/><br/>
             <div style="margin-left:10px;float:left;margin-top:-7px;">
-                Project <a href="{$model->project->url}">{$model->project->name}</a> 
                 by <a class="btn btn-info btn-xs" href="{$model->project->team->url}">
                 <img src="/images/team.png" style="width:20px;height:20px"/>  {$model->project->team->name}
                 </a>

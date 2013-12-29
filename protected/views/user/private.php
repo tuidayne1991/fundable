@@ -37,23 +37,16 @@ $this->breadcrumbs=array(
     </div>
     <div>
         <h4>Groups</h4>
-        <ul style="list-style:none;">
             <? foreach($model->teams as $team){ ?>
-                <li>
-                    <?= $team->name ?>
-                </li>
+                <a href="<?= $team->profileUrl ?>"><img src="<?= $team->logo ?>" style="width:25px;height:25px;border:1px solid #ddd;"></img></a>
             <? } ?>
-        </ul>
     </div>
     <div>
         <h4>Project</h4>
-        <ul style="list-style:none;">
             <? foreach($model->projects as $project){ ?>
-                <li>
-                    <?= $project->name ?>
-                </li>
+                <a href="<?= $project->profileUrl ?>"><img src="<?= $project->logo ?>" style="width:25px;height:25px;border:1px solid #ddd;"></img></a>
             <? } ?>
-        </ul>
+
     </div>
 
     </div>

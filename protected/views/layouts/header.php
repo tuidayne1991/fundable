@@ -48,8 +48,8 @@
         <? if($isLogin){ ?>
             <? if($project == "drstartup"){ ?>
             <li>
-                <a class="dropdown-toggle" id="applst" data-toggle="dropdown" style="font-size:18px;color:white;">
-                    <i class="glyphicon glyphicon glyphicon-link .white"></i>
+                <a class="dropdown-toggle" id="applst" data-toggle="dropdown" style="font-size:18px;color:white;padding-top: 10px;padding-bottom: 10px;">
+                    <img src="/images/team.png" style="width:30px;height:30px;"/>
                 </a>
                 
                 <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="applst">    
@@ -62,7 +62,7 @@
             </li>
             <? } ?>
             <li>
-                <a class="dropdown-toggle" id="dropdownmenu" data-toggle="dropdown" style="font-size:18px;color:white;">
+                <a class="dropdown-toggle" id="dropdownmenu" data-toggle="dropdown" style="font-size:18px;color:white;padding-bottom: 10px;">
                     <i class="glyphicon glyphicon-align-justify .white"></i>
                 </a>
                 
@@ -72,9 +72,8 @@
                             <li role="presentation"><a href="/msfundy/box/index" role="menuitem" tabindex="-1">Wallets</a></li>
                             <li role="presentation"><a href="/msfundy/transaction/index" role="menuitem" tabindex="-1">Transactions</a></li>
                         <? } ?>
-                            <li role="presentation"><a href="/user/index/<?= $owner->id?>" role="menuitem" tabindex="-1">My Profile</a></li>
+                            <li role="presentation"><a href="/user/private/<?= $owner->id?>" role="menuitem" tabindex="-1">My Profile</a></li>
                             <li role="presentation"><a href="/msfundy" role="menuitem" tabindex="-1">My Money</a></li>
-                            <li role="presentation"><a href="/mrtime" role="menuitem" tabindex="-1">My Task</a></li>
                             <li role="presentation"><a href="/site/logout" role="menuitem" tabindex="-1">Logout</a></li>
                 </ul>
             </li>

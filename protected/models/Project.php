@@ -121,6 +121,9 @@ class Project extends CActiveRecord
 	public function getUrl(){
 		return "/project/view/id/".$this->id;
 	}
+	public function getProfileUrl(){
+		return "/project/view/id/".$this->id;
+	}
 	public function getLogo( ){
 		$photo = Photo::model( )->findByAttributes(
 			array(	'owner_id' => $this->id,

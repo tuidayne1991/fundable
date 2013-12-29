@@ -31,7 +31,7 @@ class TeamController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','uploadLogo'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -99,6 +99,35 @@ class TeamController extends Controller
 			'model'=>$model,
 		));
 	}
+
+	public function actionUploadLogo( ){
+        $tmp_file = $_FILES['Filedata']['tmp_name'];
+        $url = "/images/uploads/team/".uniqid( ).".jpg";
+        $path = dirname(__FILE__)."/../../".$url;
+        move_uploaded_file($tmp_file, $path);
+        if(isset($_POST['team_id'])){
+        	$team_id = $_POST['team_id'];
+        	$team = $this->loadModel($team_id);
+        	$team->setLogo(false);
+	        $logo = new Photo; 
+	        $logo->owner_id = $team_id;
+	        $logo->location = $path;
+	        $logo->url = $url;
+	        $logo->type = "team_logo";
+	        $logo->status = true;
+	        if($logo->save()){
+	             print CJSON::encode(array(
+	                    'status'=>true,
+	                    'url'=>$logo->url,
+	         	));
+	            Yii::app()->end();
+        	}
+        }
+        print CJSON::encode(array(
+	    	'status'=>false
+	    ));
+	    Yii::app()->end();
+    }
 
 	public function actionAddMember(){
 		$model=new TeamUser;

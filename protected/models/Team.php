@@ -119,8 +119,19 @@ class Team extends CActiveRecord
         }
         return $memberLst;
 	}
-public function getUrl(){
+    
+    public function getUrl(){
         return "/team/view/id/".$this->id;
+    }
+    
+    public function getProfileUrl(){
+        return "/team/view/id/".$this->id;
+    }
+
+    public function setLogo($status){
+        if(!$status){
+            Photo::model( )->updateAll(array('status' => false),'owner_id = :owner_id AND type = :type',array(':owner_id' => $this->id,':type' => 'team_logo'));
+        }
     }
 
 	public function getMemberIds(){
@@ -131,6 +142,18 @@ public function getUrl(){
         }
         return $memberIds;
 	}
+
+    public function getLogo( ){
+        $photo = Photo::model( )->findByAttributes(
+            array(  'owner_id' => $this->id,
+                    'type' => 'team_logo',
+                    'status' => true),
+            array('limit' => 1));
+        if($photo != null){
+            return $photo->url;
+        }
+        return "/images/uploads/team/default.jpg";
+    }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
