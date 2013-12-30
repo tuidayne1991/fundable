@@ -32,7 +32,7 @@ class TaskController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','switch','assigneeEdit','assigneeUpdate'),
+				'actions'=>array('create','update','switch','assigneeEdit','assigneeUpdate','loadPersonalform','createbyuser'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -71,9 +71,10 @@ class TaskController extends Controller
 		{
 			$model->attributes=$_POST['Task'];
             $project = $model->project;
-            
+            $model->type = "team";
             $model->task_code = $project->no_task + 1;
             $project->no_task = $project->no_task + 1;
+            $model->created_at = new CDbExpression('NOW()');
 			if($model->save()){    
                 if($project->save( )){
 				    Sender::sendTaskAssignmentNotificationEmail($this->user,$model,$model->assignee);
@@ -88,6 +89,44 @@ class TaskController extends Controller
 			));
 		}
 	}
+
+
+    public function actionLoadPersonalForm()
+    {
+        $model=new Task;
+        $model->assignee_id = $this->user->id;
+        $model->type = "user";
+        #load form
+        print $this->renderPartial('_personal_form', array('model'=>$model,'owner' => $this->user),true,true);
+        Yii::app()->end();
+    }
+
+    public function actionCreateByUser()
+    {
+        $model=new Task;
+        $this->performAjaxValidation($model);
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+        if(isset($_POST['Task']))
+        {
+            $model->attributes=$_POST['Task'];
+            $model->created_at = new CDbExpression('NOW()');
+            if($model->save()){
+                $model = Task::model( )->findByPk($model->id);
+                echo CJSON::encode(array(
+                    'status'=>true,
+                    'id'=>$model->id,
+                    'item'=>MyHtml::createTaskItemHtml($model),
+                ));
+            }
+            Yii::app()->end();
+        }
+
+        $this->render('create',array(
+            'model'=>$model,
+        ));
+    }
 
 	public function actionAssigneeEdit( ){
 		if(isset($_POST['id'])) {

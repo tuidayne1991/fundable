@@ -52,22 +52,17 @@ $this->breadcrumbs=array(
     </div>
     <div id="col2" style="float:left;width:500px;padding-left:10px;border-left:1px solid #ddd;">
         <div class="pull-right">
-            <button class="btn btn-success" id="js-add-action">+</button>
+            <button class="btn btn-info" id="js-add-task"><i class="glyphicon glyphicon-plus"></i></button>
         </div>
         <h1>Tasks</h1>
 
-        <div id="action-form-container">
+        <div id="task-form-container">
         </div>
 
         <br/>
-        <div id="action-container">
-            <? foreach($this->user->actions as $action){?>
-                <?= MyHtml::createActionItemHtml($action) ?>
-            <? } ?>
-        </div>
 
-        <div id="task-container">
-            <ul class="task-list">
+        <div>
+            <ul id="task-container" class="task-list">
                 <? foreach($this->user->tasks as $task){?>
                     <?= MyHtml::createTaskItemHtml($task) ?>
                 <? } ?>
@@ -221,6 +216,30 @@ $(document).on('click', '#js-add-contact', function(event){
 });
 EO_SCRIPT;
 
+
+$add_task_script = <<<EO_SCRIPT
+$(document).on('click', '#js-add-task', function(event){
+    event.preventDefault();
+    var container = $('#task-form-container');
+    var url = '/task/loadPersonalForm';
+    var json = { };
+    $.post(url,json, function(data) {
+        if(data){
+            container.html(data);
+            container.show();
+        }
+    });
+});
+EO_SCRIPT;
+
+$cancel_task_script = <<<EO_SCRIPT
+$(document).on('click', '#js-cancel-task', function(event){
+    event.preventDefault();
+    var container = $('#task-form-container');
+    container.hide( );
+});
+EO_SCRIPT;
+
 $edit_task_script = <<<EO_SCRIPT
 task_id = 1;
 function mySideChange(front) {
@@ -276,9 +295,13 @@ Yii::app()->clientScript->registerScript('cancel_change_password', $cancel_chang
 
 Yii::app()->clientScript->registerScript('add_contact', $add_contact_script, CClientScript::POS_READY);
 
+
 Yii::app()->clientScript->registerScript('edit_task', $edit_task_script, CClientScript::POS_READY);
+Yii::app()->clientScript->registerScript('add_task', $add_task_script, CClientScript::POS_READY);
+Yii::app()->clientScript->registerScript('cancel_task', $cancel_task_script, CClientScript::POS_READY);
 
 Yii::app()->clientScript->registerScript('switch_task_clock', $switch_task_clock_script, CClientScript::POS_READY);
+
 
 
 }

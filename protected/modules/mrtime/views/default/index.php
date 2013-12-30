@@ -44,7 +44,7 @@ $add_action_form_script = <<<EO_SCRIPT
 $(document).on('click', '#js-add-action', function(event){
     event.preventDefault();
     var container = $('#action-form-container');
-    var url = '/mrtime/action/loadForm';
+    var url = '/mrtime/action/loadPersonalForm';
     var json = { };
     $.post(url,json, function(data) {
         if(data){

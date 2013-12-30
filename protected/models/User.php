@@ -64,7 +64,7 @@ class User extends CActiveRecord
 			'teams' => array(self::HAS_MANY, 'Team', 'team_id', 'through'=>'teamusers'),
 			'projectusers' => array(self::HAS_MANY, 'ProjectUser', 'user_id'),
 			'projects' => array(self::HAS_MANY, 'Project', 'project_id', 'through'=>'projectusers'),
-			'tasks' => array(self::HAS_MANY, 'Task', 'assignee_id'),
+			'tasks' => array(self::HAS_MANY, 'Task', 'assignee_id','order'=>'created_at DESC'),
 			'contacts' => array(self::HAS_MANY, 'Contact', 'owner_id')
 		);
 	}
