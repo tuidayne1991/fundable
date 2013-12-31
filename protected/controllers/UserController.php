@@ -10,7 +10,7 @@ class UserController extends Controller
                 'users'=>array('*'),
             ),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('updateProfile','edit','changePassword','loadpasswordform','uploadAvatar','private'),
+				'actions'=>array('updateProfile','edit','changePassword','loadpasswordform','uploadAvatar','private','editInfo','updateInfo'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -157,6 +157,31 @@ class UserController extends Controller
                 ));
             }
         }
+        Yii::app()->end();
+    }
+    
+    public function actionUpdateInfo($id){
+        $model=$this->loadModel($id);
+        $this->performAjaxValidation($model);
+        if(isset($_POST['User']))
+        {
+            $model->attributes=$_POST['User'];
+            $model->name = $_POST['User']['name'];
+            $model->currency = $_POST['User']['currency'];
+            $model->setScenario('updateInfo');
+            if($model->save()){
+               print CJSON::encode(array(
+                    'status'=>true,
+                    'id'=>$model->id,
+                    'item'=>MyHtml::createUserProfileHtml($model),
+                ));
+            }
+        }
+        Yii::app()->end();
+    }
+
+    public function actionEditInfo(){
+        print $this->renderPartial('_information_form', array('model'=>$this->user),true,true);
         Yii::app()->end();
     }
 

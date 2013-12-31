@@ -73,7 +73,9 @@ $this->breadcrumbs=array(
     <div id="col3" class="pull-right" style="border-left: 1px solid #ddd;width:210px;padding-left:10px;">
         <span style="font-size:18px;">Contact</span>
         <div class="pull-right">
-            <button class="btn btn-info" data-toggle="modal" data-target="#new-contact-modal">+</button>
+            <button class="btn btn-info" data-toggle="modal" data-target="#new-contact-modal">
+            <i class="glyphicon glyphicon-plus"></i>
+            </button>
         </div><br/><br/>
 
 <!-- Modal -->
@@ -96,9 +98,16 @@ $this->breadcrumbs=array(
         <div id="add-contact-form-container">
             
         </div>
-        <div>
-        <input class="form-control" type="text" placeholder="Searching for" />
-        </div>
+        <!-- contact search bar-->
+            <div class="input-group" style="margin-top:5px;">
+              <input type="text" class="form-control" style="height: 28px;">
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+             </button>
+             </span>
+             </div><!-- /input-group -->
+
         <br/>
         <div id="contact-container">
             <? foreach($model->contacts as $contact){ ?>

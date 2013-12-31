@@ -75,5 +75,18 @@ class Util{
         // send
         Yii::app()->mail->send($message);
     }
+
+    public static function getInfoList($flag = false){
+        $lst = array(
+            'Phone' => 'phone',
+            'Address' => 'address', 
+            'Birthday' => 'birthday',
+            'Facebook' => 'facebook',
+            'G+' => 'G+',
+            'Skype' => 'skype',
+            'Yahoo' => 'yahoo');
+        if($flag)$lst['Other'] = 'Other';
+        return $lst;
+    }
 }
 ?>
