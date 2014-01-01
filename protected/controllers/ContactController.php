@@ -32,7 +32,7 @@ class ContactController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','loadSmallForm','loadOwnerForm'),
+				'actions'=>array('create','update','loadSmallForm','loadOwnerForm','CreateByJson'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -84,6 +84,31 @@ class ContactController extends Controller
 		));
 	}
 	
+	public function actionCreateByJson( )
+	{
+		$model=new Contact;
+		$this->performAjaxValidation($model);
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['json_contact']))
+		{
+			$model->setScenario('addContactByJson');
+            $model->contact_json = CJSON::encode($_POST['json_contact']);
+            $model->owner_id = $this->user->id;
+			if($model->save()){
+				echo CJSON::encode(array(
+					'status'=>true,
+					'id'=>$model->id,
+					'item'=>MyHtml::createContactItemHtml($model),
+				));
+				Yii::app()->end();
+			}
+			var_dump($model->getErrors( ));
+			exit(0);
+		}
+		Yii::app()->end();
+	}
 
 
 	/**

@@ -30,7 +30,7 @@ class Contact extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('owner_id, email,name', 'required'),
+			array('owner_id', 'required'),
 			array('owner_id', 'numerical', 'integerOnly'=>true),
 			array('email','email'),
 			// The following rule is used by search().
