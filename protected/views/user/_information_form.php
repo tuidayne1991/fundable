@@ -1,34 +1,42 @@
 <?
+    $json_info =CJSON::decode($model->json_information);
+    $index = 1;
+?>
+<?
     $add_information_attributes_script = <<<EO_SCRIPT
 $(document).on('click', '.js-add-information', function(event){
+    event.preventDefault();
+    $("#clone").removeClass("open");
     el = $(this);
     id = $("#origin").attr('data-id');
     id++;
     $("#origin").attr('data-id',id);
     $("#origin #key-title").html(el.attr('data-id'));
     $("#origin #key-title").attr('name','k' + id);
+    $("#origin .dropdown").attr('data-id',id);
+
     clone = $("#origin").html( );
     event.preventDefault();
     var container = $('#information-attributes-container');
-    container.append("<br/>");
     container.append(clone);
-
 });
 
 $(document).on('click', '.js-add-other-information', function(event){
+    event.preventDefault();
+    $("#clone").removeClass("open");
     el = $(this);
     id = $("#origin").attr('data-id');
     id++;
     $("#origin").attr('data-id',id);
-    $("#origin #key-title").replaceWith("<input id=key-title />");
+    $("#origin #key-title").replaceWith("<input id=key-title style='outline: none;border: 0;border-bottom: 1px solid #ddd;width: 60px;'/>");
     $("#origin #key-title").attr('name','k' + id);
+    $("#origin .dropdown").attr('data-id',id);
     clone = $("#origin").html( );
 
     $("#origin #key-title").replaceWith("<span id=key-title></span>");
 
     event.preventDefault();
     var container = $('#information-attributes-container');
-    container.append("<br/>");
     container.append(clone);
 
 });
@@ -36,19 +44,44 @@ EO_SCRIPT;
 
 $choose_information_attributes_script = <<<EO_SCRIPT
 $(document).on('click', '.js-choose-information', function(event){
+    event.preventDefault();
     el = $(this);
     new_value = el.attr('data-id');
-    el.parent().parent( ).parent( ).find("#key-title").text(new_value);
+    el.closest("#clone").find("#key-title").replaceWith("<span id=key-title>"+new_value+"</span>");
 });
 
 $(document).on('click', '.js-choose-other-information', function(event){
+    event.preventDefault();
     el = $(this);
     new_value = el.attr('data-id');
-    el.parent().parent( ).parent( ).find("#key-title").text(new_value);
+    el.closest("#clone").find("#key-title").replaceWith("<input id=key-title style='outline: none;border: 0;border-bottom: 1px solid #ddd;width: 60px;'/>");
+});
+EO_SCRIPT;
+
+$submit_info_script = <<<EO_SCRIPT
+$(document).on('click', '#js-submit-info', function(event){
+    event.preventDefault();
+    var url = '/user/updateInfo/id/{$model->id}';
+    var json_info = { };
+    no = $("#origin").attr('data-id');
+    for(var i = 1;i <= no;i++){
+        key = $("#clone[data-id='"+i+"'] #key-title").val();
+        if(key == "")key = $("#clone[data-id='"+i+"'] #key-title").html();
+        value = $("#clone[data-id='"+i+"'] #value").val();
+        json_info[key] = value; 
+    }
+    $.post(url,{json_info:json_info}, function(data){
+        if(data.status){
+            $('#information-container').html(data.item);
+            $('#information-container').show( );
+            $('#information-form-container').hide();
+        }
+    },'json');
 });
 EO_SCRIPT;
 Yii::app()->clientScript->registerScript('add_information_attributes', $add_information_attributes_script, CClientScript::POS_READY);
 Yii::app()->clientScript->registerScript('choose_information_attributes', $choose_information_attributes_script, CClientScript::POS_READY);
+Yii::app()->clientScript->registerScript('submit_info', $submit_info_script, CClientScript::POS_READY);
 ?>
 
 <div class="form">
@@ -65,7 +98,6 @@ Yii::app()->clientScript->registerScript('choose_information_attributes', $choos
         'validateOnSubmit'=>true,
         'validateOnChange'=>false,
         'validateOnType'=>false,
-        'beforeValidate' => 'js:addJsonInfo',
         'afterValidate'=>"js:function(form, data, hasError){
             if(data.status == true){
                 $('#profile-container').html(data.item);
@@ -76,18 +108,6 @@ Yii::app()->clientScript->registerScript('choose_information_attributes', $choos
         }"
     ),
 ));
-
-$add_json_info_script = <<< EOF_JS
-function addJsonInfo() {
-    var json_info = { };
-    no = $("#origin").attr('data-id');
-    for(var i = 1;i <= no;i++){
-        json_info['i'+i] = $("[data-id="+i+"] #value").val();
-    }
-    return true;
-}
-EOF_JS;
-Yii::app()->clientScript->registerScript('add_json_info', $add_json_info_script);
 ?>
     <div class="input-row">
         <?php echo $form->labelEx($model,'name',array('class' => 'login-lb')); ?>
@@ -102,9 +122,40 @@ Yii::app()->clientScript->registerScript('add_json_info', $add_json_info_script)
     </div>
     
     <div id="information-attributes-container">
+        <? foreach($json_info as $k => $v){ ?>
+        <div id="clone" class="dropdown" data-id="<?= $index ?>" >
+            <div style="width:80px;float:left;text-align:right;margin-right:5px;">
+                <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;color:black;">
+                    <span id="key-title"><?= $k ?></span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="text-align:left;">
+                    <? foreach(Util::getInfoList(true) as $key => $info){ ?>
+                         <? if($info == "Other"){ ?>
+                            <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#" data-id="<?= $key ?>" class="js-choose-other-information">
+                                    <?= $info ?>
+                                </a>
+                            </li>
+                            <? }else{ ?>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#" data-id="<?= $key ?>" class="js-choose-information">
+                                    <?= $info ?>
+                                </a>
+                            </li>
+                            <? } ?>
+                    <? } ?>
+                </ul>
+            </div>
+            <div>
+                <input type="text" placeholder="value" id="value" value="<?= $v ?>" />
+            </div>
+            <br/>
+        </div>
+        <? $index++;?>
+        <? } ?>
     </div>
     <div class="dropdown">
-        <a id="js-choose-information-attributes" id="choose-information-attributes" data-toggle="dropdown" class="dropdown-toggle btn btn-info btn-xs"><i class="glyphicon glyphicon-plus"></i></a>
+        <a id="js-choose-information-attributes" id="choose-information-attributes" data-toggle="dropdown" class="dropdown-toggle btn btn-info btn-sm"><i class="glyphicon glyphicon-plus"></i></a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="choose-information-attributes">
             <? foreach(Util::getInfoList(true) as $key => $info){ ?>     
                     <? if($info == "Other"){ ?>
@@ -127,20 +178,17 @@ Yii::app()->clientScript->registerScript('add_json_info', $add_json_info_script)
 
     <br/></br>
     
-    <div id="origin" style="display:none" data-id="0">
-        <div class="dropdown">
+    <div id="origin" style="display:none" data-id="<?= count($json_info)?>">
+        <div id="clone" class="dropdown" data-id="0">
             <div style="width:80px;float:left;text-align:right;margin-right:5px;">
-                <span id="key-title"></span>
-                <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </a>
+                <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;color:black;"><span id="key-title"></span> <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="text-align:left;">
                     <? foreach(Util::getInfoList(true) as $key => $info){ ?>
                          <? if($info == "Other"){ ?>
                             <li role="presentation">
-                                <a role="menuitem" tabindex="-1" href="#" data-id="<?= $key ?>" class="js-choose-other-information">
-                                    <?= $info ?>
-                                </a>
+                            <a role="menuitem" tabindex="-1" href="#" data-id="<?= $key ?>" class="js-choose-other-information">
+                                <?= $info ?>
+                            </a>
                             </li>
                             <? }else{ ?>
                             <li role="presentation">
@@ -159,8 +207,10 @@ Yii::app()->clientScript->registerScript('add_json_info', $add_json_info_script)
         </div>  
     </div>
 
+    <?php echo $form->hiddenField($model,'json_information'); ?>
+
     <div class="input-row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'btn btn-info btn-xs')); ?>
+        <button id="js-submit-info" class="btn btn-info btn-xs">Save</button>
         <button id="js-cancel-edit-info" class="btn btn-info btn-xs">Cancel</button>
     </div>
 

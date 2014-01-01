@@ -163,17 +163,15 @@ class UserController extends Controller
     public function actionUpdateInfo($id){
         $model=$this->loadModel($id);
         $this->performAjaxValidation($model);
-        if(isset($_POST['User']))
+        if(isset($_POST['json_info']))
         {
-            $model->attributes=$_POST['User'];
-            $model->name = $_POST['User']['name'];
-            $model->currency = $_POST['User']['currency'];
             $model->setScenario('updateInfo');
+            $model->json_information = CJSON::encode($_POST['json_info']);
             if($model->save()){
                print CJSON::encode(array(
                     'status'=>true,
                     'id'=>$model->id,
-                    'item'=>MyHtml::createUserProfileHtml($model),
+                    'item'=>MyHtml::createUserInfoHtml($model),
                 ));
             }
         }

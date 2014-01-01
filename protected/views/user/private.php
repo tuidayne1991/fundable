@@ -19,7 +19,7 @@ $this->breadcrumbs=array(
             </button>
     </div>
     <div style="text-align:center;">
-        <a href="/user/public/<?= $model->id?>">Public</a> | <a href="/user/private">Private</a>
+        <a href="/user/public/<?= $model->id?>">Outside</a> | <a href="/user/private">Inside</a>
     </div>
     <div id="profile-form-container">
     </div>

@@ -49,7 +49,6 @@ Yii::app()->clientScript->registerScript('cancel_add_contact', $cancel_add_conta
         }"
     ),
 )); ?>
-
     <?php echo $form->errorSummary($model); ?>
     <div class="input-row">
         <?php echo $form->labelEx($model,'name',array('class' => 'login-lb')); ?>

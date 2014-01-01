@@ -192,6 +192,18 @@ HTML;
         return $html;
     }
 
+    public static function createUserInfoHtml($model){
+      $json_info =CJSON::decode($model->json_information);
+      $data = "";
+      foreach ($json_info as $key => $value) {
+        $data = $data . $key . " : " . $value. "<br/>"; 
+      }
+      $html = <<<HTML
+      {$data}    
+HTML;
+        return $html;
+    }
+
     public static function createProjectMemberItemHtml($model){
 $html = <<<HTML
     <li>

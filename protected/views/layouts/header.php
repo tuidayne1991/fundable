@@ -72,7 +72,7 @@
                             <li role="presentation"><a href="/msfundy/box/index" role="menuitem" tabindex="-1">Wallets</a></li>
                             <li role="presentation"><a href="/msfundy/transaction/index" role="menuitem" tabindex="-1">Transactions</a></li>
                         <? } ?>
-                            <li role="presentation"><a href="/user/private" role="menuitem" tabindex="-1">My Profile</a></li>
+                            <li role="presentation"><a href="/user/private" role="menuitem" tabindex="-1">My Inside</a></li>
                             <li role="presentation"><a href="/msfundy" role="menuitem" tabindex="-1">My Money</a></li>
                             <li role="presentation"><a href="/site/logout" role="menuitem" tabindex="-1">Logout</a></li>
                 </ul>

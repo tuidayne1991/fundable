@@ -148,7 +148,7 @@ class User extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('is_activated',$this->is_activated);
-
+		$criteria->compare('json_information',$this->json_information);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

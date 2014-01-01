@@ -20,7 +20,7 @@ $this->breadcrumbs=array(
     </div>
     <? if($isOwner){ ?>
         <div style="text-align:center;">
-            <a href="/user/public/<?= $model->id?>">Public</a> | <a href="/user/private">Private</a>
+            <a href="/user/public/<?= $model->id?>">Outside</a> | <a href="/user/private">Inside</a>
         </div>
     <? } ?>
     <div id="profile-container">
@@ -47,13 +47,12 @@ $this->breadcrumbs=array(
   <div class="panel-heading">
     <h3 class="panel-title">
         <?= $model->name?>'s Contact Information
-        <a class="pull-right" id="js-edit-information" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+        <a class="pull-right" id="js-edit-information" href="#"><i class="glyphicon glyphicon-pencil"></i></a>
     </h3>
   </div>
   <div class="panel-body">
     <div id="information-container">
-        Name: <?= $model->name ?><br/>
-        Email: <?= $model->email ?><br/>
+        <?= MyHtml::createUserInfoHtml($model)?>
     </div>
     <div id="information-form-container">
 
@@ -69,7 +68,6 @@ $this->breadcrumbs=array(
        </div> 
     </div>
 </div>
-
 <?
 $avatar_update_script = <<<EO_SCRIPT
             // blur event
@@ -102,7 +100,14 @@ $avatar_update_script = <<<EO_SCRIPT
             }
         });
 EO_SCRIPT;
+
+$test_script = <<<EO_SCRIPT
+$(document).on('click', '#test-btn', function(event){
+   $("#dropdown").addClass("open"); 
+});
+EO_SCRIPT;
     Yii::app()->clientScript->registerScript('avatar_update', $avatar_update_script, CClientScript::POS_READY);
+    Yii::app()->clientScript->registerScript('test', $test_script, CClientScript::POS_READY);
 ?>
 
 
