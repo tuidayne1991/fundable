@@ -195,8 +195,10 @@ HTML;
     public static function createUserInfoHtml($model){
       $json_info =CJSON::decode($model->json_information);
       $data = "";
-      foreach ($json_info as $key => $value) {
-        $data = $data . $key . " : " . $value. "<br/>"; 
+      if($json != null){
+        foreach ($json_info as $key => $value) {
+          $data = $data . $key . " : " . $value. "<br/>"; 
+        }
       }
       $html = <<<HTML
       {$data}    
