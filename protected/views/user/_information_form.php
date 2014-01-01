@@ -122,6 +122,7 @@ Yii::app()->clientScript->registerScript('submit_info', $submit_info_script, CCl
     </div>
     
     <div id="information-attributes-container">
+        <? if($json_info != null){ ?>
         <? foreach($json_info as $k => $v){ ?>
         <div id="clone" class="dropdown" data-id="<?= $index ?>" >
             <div style="width:80px;float:left;text-align:right;margin-right:5px;">
@@ -152,6 +153,7 @@ Yii::app()->clientScript->registerScript('submit_info', $submit_info_script, CCl
             <br/>
         </div>
         <? $index++;?>
+        <? } ?>
         <? } ?>
     </div>
     <div class="dropdown">
