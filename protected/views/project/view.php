@@ -20,10 +20,19 @@ by <a href="/project/id/1"><?= $model->team->name ?></a>
         <?=Yii::t('app', 'Edit')?>
     </button>
 </div>
+
+<form action="/spec/create" method="GET">
+    <input type="hidden" name="project" value="<?= $model->id?>"/>
+    <button class="btn btn-danger">Create Spec</button>
+</form>
 <form action="/task/create" method="GET">
     <input type="hidden" name="project" value="<?= $model->id?>"/>
     <button class="btn btn-danger">Create Task</button>
 </form>
+<h1>Spec</h1>
+<? foreach($model->specs as $spec){?>
+    <a href="<?= $spec->url ?>"><?= $spec->title?></a>
+<? } ?>
 
 <h2>Member</h2>
 <ul id="project-member-container">

@@ -50,6 +50,7 @@ class Project extends CActiveRecord
 			'team' => array(self::BELONGS_TO, 'Team', 'team_id'),
 			'members' => array(self::MANY_MANY, 'User', 'project_user(project_id, user_id)'),
 			'tasks' => array(self::HAS_MANY, 'TASK', 'project_id'),
+			'specs' => array(self::HAS_MANY, 'Spec', 'project_id'),
 		);
 	}
 

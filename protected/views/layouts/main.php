@@ -20,10 +20,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 	-->
-
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-switch.css" />
+
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/rotate3Di.js"></script>
@@ -34,7 +33,8 @@
 
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/upclick.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-switch.js"></script>
+
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -53,5 +53,42 @@
     	</div>
     </footer>
 
+    <div id="chatbox" class="row" style="display:none;">
+    	<div class="col-lg-2" style="position:fixed;left:auto;right:0;bottom:0;z-index:200">
+        <div id="chatbox">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                	Thong Nguyen
+                	<a id="remove-chatbox" class="pull-right" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+               	</div>
+                <div class="panel-body" style="height:250px">
+                
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="input-group">
+                          <input type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+                        </div><!-- /input-group -->
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
+<?
+$remove_chatbox_script = <<<EO_SCRIPT
+$(document).on('click', '#remove-chatbox', function(event){
+    $("#chatbox").hide( );
+
+});
+EO_SCRIPT;
+Yii::app()->clientScript->registerScript('remove_chatbox', $remove_chatbox_script, CClientScript::POS_READY);
+?>

@@ -20,7 +20,8 @@ $this->breadcrumbs=array(
     </div>
     <? if($isOwner){ ?>
         <div style="text-align:center;">
-            <a href="/user/public/<?= $model->id?>">Outside</a> | <a href="/user/private">Inside</a>
+            <a href="/user/public/<?= $model->id?>">Outside</a> | <a href="/user/private">Inside</a><br/>
+                    <button class="btn btn-info btn-xs" style="padding: 0px 0px;"><img src="/images/handshake.png" style="width:45px;height:30px;"></img></button>
         </div>
     <? } ?>
     <div id="profile-container">

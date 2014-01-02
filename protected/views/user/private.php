@@ -297,6 +297,13 @@ $(document).on('click', '#js_switch_task_clock', function(event){
 });
 EO_SCRIPT;
 
+$open_chat_box_script = <<<EO_SCRIPT
+$(document).on('click', '#contact-item', function(event){
+    $("#chatbox").show( );
+
+});
+EO_SCRIPT;
+
 Yii::app()->clientScript->registerScript('update_profile_form', $edit_profile_script, CClientScript::POS_READY);
 Yii::app()->clientScript->registerScript('cancel_profile_form', $cancel_profile_script, CClientScript::POS_READY);
 Yii::app()->clientScript->registerScript('change_password', $change_password_script, CClientScript::POS_READY);
@@ -310,7 +317,7 @@ Yii::app()->clientScript->registerScript('add_task', $add_task_script, CClientSc
 Yii::app()->clientScript->registerScript('cancel_task', $cancel_task_script, CClientScript::POS_READY);
 
 Yii::app()->clientScript->registerScript('switch_task_clock', $switch_task_clock_script, CClientScript::POS_READY);
-
+Yii::app()->clientScript->registerScript('open_chat_box', $open_chat_box_script, CClientScript::POS_READY);
 
 
 }

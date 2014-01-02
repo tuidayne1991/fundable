@@ -218,15 +218,34 @@ HTML;
     public static function createContactItemHtml($model){
 $html = <<<HTML
       <div style="float:left;">
-        <img id="contact-{$model->id}" data-toggle="tooltip" data-placement="top" data-original-title="{$model->name}" src="{$model->image}" style="width:25px;height:25px;"></img>
+        <a id="contact-item" class="contact-{$model->id}" data-id="{$model->id}">
+          <img data-toggle="tooltip" data-placement="top" data-original-title="{$model->name}" src="{$model->image}" style="width:25px;height:25px;"></img>
+        </a>
       </div>
       <script>
-       $(function(){
-        $('#contact-{$model->id}').tooltip('hide');
-       });
+        $(function(){
+          $('#contact-{$model->id}').tooltip('hide');
+        });
       </script>
 HTML;
         return $html;
+    }
+
+    public static function createSpecViewHtml($model){
+$html = <<<HTML
+  <div class="page-header">
+    <h1>{$model->title}</h1>
+    <div>Project <a href="{$model->project->profileUrl}">{$model->project->name}</a> by 
+      <a class="btn btn-info btn-sm" href="{$model->project->team->profileUrl}">
+        <img src="/images/team.png" style="width:20px;height:20px"/> {$model->project->team->name}
+      </a>
+    </div>
+  </div>
+<div id="page-content">
+  {$model->content}
+</div>
+HTML;
+return $html;
     }
 }
 ?>
