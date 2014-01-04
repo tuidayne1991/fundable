@@ -153,7 +153,14 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function getInsideUrl( ){
+		return "/user/private";
+	}
 
+	public function getOutsideUrl( ){
+		return "/user/public/".$this->id;
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

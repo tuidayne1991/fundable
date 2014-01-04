@@ -51,8 +51,9 @@ class SpecController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model = $this->loadModel($id);
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
 		));
 	}
 
@@ -72,10 +73,13 @@ class SpecController extends Controller
 			$model->attributes=$_POST['Spec'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
+			var_dump($model->getErrors( ));
+			exit(0);
 		}
 		if(isset($_GET['project'])){
 			$model->project_id = $_GET['project'];
 		}
+		$model->author_id = $this->user->id;
 		$this->render('create',array(
 			'model'=>$model,
 		));

@@ -31,10 +31,8 @@ class Spec extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('project_id, title, content', 'required'),
+			array('project_id, title, content, author_id,version', 'required'),
 			array('project_id', 'numerical', 'integerOnly'=>true),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
 			array('id, project_id, title, content, created_at', 'safe', 'on'=>'search'),
 		);
 	}
@@ -48,6 +46,7 @@ class Spec extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'project' => array(self::BELONGS_TO, 'Project', 'project_id'),
+			'author' => array(self::BELONGS_TO, 'User', 'author_id'),
 		);
 	}
 
@@ -61,7 +60,7 @@ class Spec extends CActiveRecord
 			'project_id' => 'Project',
 			'title' => 'Title',
 			'content' => 'Content',
-			'created_at' => 'Created At',
+			'created_at' => 'Created At'
 		);
 	}
 
@@ -88,6 +87,8 @@ class Spec extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('created_at',$this->created_at);
+		$criteria->compare('version',$this->version);
+		$criteria->compare('author_id',$this->author_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -95,7 +96,7 @@ class Spec extends CActiveRecord
 	}
 
 	public function getUrl( ){
-		return "/spec/id/".$this->id;
+		return "/spec/".$this->id;
 	}
 
 	/**

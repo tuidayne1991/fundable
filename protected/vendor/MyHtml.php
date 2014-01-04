@@ -195,13 +195,38 @@ HTML;
     public static function createUserInfoHtml($model){
       $json_info =CJSON::decode($model->json_information);
       $data = "";
+      $address = "";
+      $fb = false;
+      $tw = false;
+      $gp = false;
+      $skype = false;
+      $ln = false;
       if($json_info != null){
         foreach ($json_info as $key => $value) {
-          $data = $data . $key . " : " . $value. "<br/>"; 
+          if(!$fb && Util::isFbAddress($key)){
+            $address = $address ."<span style='float:left;margin-left:5px;'><a href='".$value."'><img src='/images/facebook_circle.png' /></a></span>"; 
+            $fb = true;
+          }else if(!$tw && Util::isTwAddress($key)){
+            $address = $address ."<span style='float:left;margin-left:5px;'><a href='".$value."'><img src='/images/twitter_circle.png' /></a></span>"; 
+            $tw = true;
+          }else if(!$gp && Util::isGpAddress($key)){
+            $address = $address ."<span style='float:left;margin-left:5px;'><a href='".$value."'><img src='/images/googleplus_circle.png' /></a></span>"; 
+            $tw = true;
+          }else if(!$skype && Util::isSkypeAddress($key)){
+            $address = $address ."<span style='float:left;margin-left:5px;'><a href='".$value."'><img src='/images/skype_circle.png' /></a></span>"; 
+            $skype = true;
+          }else if(!$ln && Util::isLnAddress($key)){
+            $address = $address ."<span style='float:left;margin-left:5px;'><a href='".$value."'><img src='/images/linkin_circle.png' /></a></span>"; 
+            $ln = true;
+          }
+          else{
+            $data = $data . $key . " : " . $value. "<br/>"; 
+          }
         }
       }
       $html = <<<HTML
-      {$data}    
+      {$data}
+      {$address}
 HTML;
         return $html;
     }
@@ -233,16 +258,27 @@ HTML;
 
     public static function createSpecViewHtml($model){
 $html = <<<HTML
-  <div class="page-header">
-    <h1>{$model->title}</h1>
-    <div>Project <a href="{$model->project->profileUrl}">{$model->project->name}</a> by 
-      <a class="btn btn-info btn-sm" href="{$model->project->team->profileUrl}">
-        <img src="/images/team.png" style="width:20px;height:20px"/> {$model->project->team->name}
-      </a>
+<div id="page-content">
+  <div class="panel panel-default" style="">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        {$model->title}
+        <a id="js-update-spec" href="#" class="pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+      </h3>
+    </div>
+    <div class="panel-body">
+      <div class="page-header" style="margin-top: 0px;">
+        <div>Version: {$model->version}</div>
+        <div>Written by <a href="{$model->author->outsideUrl}">{$model->author->name}</a></div>
+        <div>Project <a href="{$model->project->profileUrl}">{$model->project->name}</a> by 
+          <a class="btn btn-info btn-sm" href="{$model->project->team->profileUrl}">
+            <img src="/images/team.png" style="width:20px;height:20px"/> {$model->project->team->name}
+          </a>
+        </div>
+      </div>
+      {$model->content}
     </div>
   </div>
-<div id="page-content">
-  {$model->content}
 </div>
 HTML;
 return $html;
