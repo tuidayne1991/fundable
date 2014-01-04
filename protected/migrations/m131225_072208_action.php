@@ -14,7 +14,7 @@ class m131225_072208_action extends CDbMigration
   start_time timestamp NOT NULL DEFAULT "0000-00-00 00:00:00",
   end_time timestamp NOT NULL DEFAULT "0000-00-00 00:00:00",
   status tinyint(1) NOT NULL DEFAULT "0",
-  created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  created_at timestamp NOT NULL DEFAULT "0000-00-00 00:00:00",
   PRIMARY KEY (id),
   KEY action_user_constraint (owner_id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=69 ;

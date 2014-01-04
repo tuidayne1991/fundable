@@ -27,7 +27,7 @@ return array(
 		),
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:unix_socket=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock;dbname=test1',
+			'connectionString' => 'mysql:unix_socket=/var/run/mysqld/mysqld.sock;dbname=drstartup',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'abc123',
