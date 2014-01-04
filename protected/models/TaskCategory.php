@@ -68,7 +68,7 @@ class TaskCategory extends CActiveRecord
 	 * based on the search/filter conditions.
 	 */
 	public function getLogo( ){
-		$dir = "/images/uploads/task_category/";
+		$dir = "/images/icons/task_category/";
 		$path1 = Yii::app()->basePath."/..".$dir.$this->id.".jpg";
 		$path2 = Yii::app()->basePath."/..".$dir.$this->id.".png";
 		if(file_exists($path1)){
@@ -76,7 +76,7 @@ class TaskCategory extends CActiveRecord
 		}else if(file_exists($path2)){
 			return $dir.$this->id.".png";
 		}
-		else return "/images/uploads/task_category/default.jpg";
+		else return "/images/icons/task_category/default.jpg";
 	}
 	public function search()
 	{
