@@ -123,7 +123,7 @@ class User extends CActiveRecord
 		if($photo != null){
 			return $photo->url;
 		}
-		else return "/images/uploads/user/default.png";
+		else return "/images/defaults/user_default.jpg";
 	}
 
 	/**

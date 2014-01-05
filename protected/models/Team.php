@@ -152,7 +152,7 @@ class Team extends CActiveRecord
         if($photo != null){
             return $photo->url;
         }
-        return "/images/uploads/team/default.jpg";
+        return "/images/defaults/team_default.jpg";
     }
 	/**
 	 * Returns the static model of the specified AR class.

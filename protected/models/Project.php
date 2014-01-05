@@ -134,7 +134,7 @@ class Project extends CActiveRecord
 		if($photo != null){
 			return $photo->url;
 		}
-		return "/images/uploads/project/default.jpg";
+		return "/images/defaults/project_default.jpg";
 	}
 
 	/**
