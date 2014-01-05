@@ -2,5 +2,5 @@
 .DS_Store
 /assets
 /protected/config/
-/protected/runtime/
-/images/upload
+/protected/runtime
+/images/uploads
