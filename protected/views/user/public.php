@@ -8,9 +8,9 @@ $this->breadcrumbs=array(
 <br>
 <div class="content">
     <div id="col1" style="float:left;padding-right:10px;">
-    <div style="text-align:center;">
-        <a href="/user/public/<?= $model->id ?>" style="text-decoration:none;font-size:25px;"><?= $model->name ?></a>
-    </div>
+        <div style="text-align:center;">
+            <a href="/user/public/<?= $model->id ?>" style="text-decoration:none;font-size:25px;"><?= $model->name ?></a>
+        </div>
     <div>
         <img src="<?= $model->image ?>" class="thumbnail" id="avatar" style="width:150px;height:150px;top:60px;left:120px" />
         <input type="file" id="source" style="display:none;"/>

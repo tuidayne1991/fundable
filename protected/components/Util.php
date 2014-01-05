@@ -88,5 +88,41 @@ class Util{
         if($flag)$lst['Other'] = 'Other';
         return $lst;
     }
+
+    public static function isFbAddress($address){
+        $ad =  strtolower($address);
+        if($ad == "fb" || $ad == "facebook")return true;
+        return false;
+    }
+
+    public static function isTwAddress($address){
+        $ad =  strtolower($address);
+        if($ad == "tw" || $ad == "twitter")return true;
+        return false;
+    }    
+
+    public static function isGpAddress($address){
+        $ad =  strtolower($address);
+        if($ad == "g+" || $ad == "googleplus" || $ad == "google plus" || $ad == "google +" || $ad == "google+" || $ad == "gplus")return true;
+        return false;
+    }
+    
+    public static function isLnAddress($address){
+        $ad =  strtolower($address);
+        if($ad == "ln" || $ad == "linkin")return true;
+        return false;
+    }
+
+    public static function isSkypeAddress($address){
+        $ad =  strtolower($address);
+        if($ad == "skype")return true;
+        return false;
+    }
+
+    public static function isLinkinAddress($address){
+        $ad =  strtolower($address);
+        if($ad == "linkin")return true;
+        return false;
+    }
 }
 ?>

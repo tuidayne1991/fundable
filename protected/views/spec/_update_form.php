@@ -38,6 +38,12 @@
         <?php echo $form->error($model,'title'); ?>
     </div>
 
+<div class="input-row">
+        <?php echo $form->labelEx($model,'version'); ?>
+        <?php echo $form->textField($model,'version',array('rows'=>6, 'cols'=>50)); ?>
+        <?php echo $form->error($model,'version'); ?>
+    </div>
+
     <div class="input-row">
         <?php echo $form->labelEx($model,'content'); ?>
         <?php echo $form->textArea($model,'content'); ?>
